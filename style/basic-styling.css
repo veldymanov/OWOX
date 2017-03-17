@@ -1,0 +1,258 @@
+*{box-sizing:border-box;}
+html {
+  font-family: sans-serif;
+  background: #e6f2ff;
+}
+body {
+  max-width: 1200px;
+  min-width: 400px;
+  margin: 0 auto;
+  background-color: white;
+  
+}
+/*For old browsers*/
+header, main, nav, footer{
+   display: block;	
+}
+
+/*Header*/
+.logo, .search, .online-help {
+	float: left;
+}
+.entrance-bucket{
+	float: right;
+	margin: 1em 1.25em;
+}
+.logo {
+	margin-left: 1.25em;
+}
+.search{
+	margin-left: 2%;
+}
+.online-help {
+	margin-left: 2%;
+}
+/*div.logo*/
+.logo img{
+	width: 9.375em;
+	height: 6.25em;
+}
+/*div.search*/
+.search p em{
+	font-size: 1.5em;	
+}
+.search p span{
+	font-size: 1.5em;
+	font-weight: bold;
+}
+.search p a:nth-child(1){
+	margin-left: 10px;
+	font-style: italic;
+	vertical-align: 0.81em;
+	text-decoration: none;
+	border-bottom-style: dotted;
+    border-width: 0 0 2px 0;
+
+}
+.search p a:nth-child(1):hover{
+	border-width: 0;
+}
+#search-form{
+	position: relative;
+}
+#search-form input[type=text] {
+    border: 1px solid #d9d9d9;
+    border-radius: 5px 2px;
+	font-size: 1.1em;
+	padding: 1px 3.375em 1px 0.35em;
+	width:100%;
+	
+	-ms-transform: skewX(-17deg); /* IE 9 */
+    -webkit-transform: skewX(-17deg); /* Safari */
+    transform: skewX(-17deg); /* Standard syntax */
+}
+#search-form input[type=submit] {
+    border: 1px solid #d9d9d9;
+	background-color: #fff;
+	padding: 0 0 0 5px;
+    border-radius: 5px 1px;
+	width: 3em;
+	height:1.05em; 
+	font-size: 1.3em;
+	position: absolute;
+	top: 2px;
+	right: 2px;
+	
+	-ms-transform: skewX(-17deg); /* IE 9 */
+    -webkit-transform: skewX(-17deg); /* Safari */
+    transform: skewX(-17deg); /* Standard syntax */
+	
+
+}
+/*div.online-help*/
+.online-help img{
+	width: 150px;
+}
+/*div.entrance-bucket*/
+.entrance-bucket #entrance{
+    font-size: 15px;	
+	text-decoration: none;
+	border-bottom-style: dotted;
+    border-width: 0 0 2px 0;
+}
+.entrance-bucket #entrance:hover{
+	border-width:0;
+}
+.entrance-bucket #entrance span:last-child{
+	display:none;
+}
+#entrance::before{
+    content: " ";  
+    float: left;  
+    position: relative;  
+
+    background: url('../images/N8240EC9D00EA.jpg') no-repeat; 
+    background-size: 23px;	
+    /*display: block;*/  
+    height: 25px;  
+    width: 25px; 
+}
+div.bucket {	
+	margin: 0.9375em auto;
+	width: 12.5em;
+	height: 3.125em;
+	border: 1px solid #d9d9d9;
+	border-radius: 5px;
+	
+}
+div.bucket a{
+	display: inline-block;/* Make a block. Full clickable area.*/
+    border: none; /*button*/
+	cursor: pointer; /*button*/
+	width: 100%; /*button*/
+	height:100%;
+	text-align: center; /*button*/	
+	padding: 0.35em 0.5em 0 0.5em;
+	font-size: 1.5em;
+}
+div.bucket a::after{
+    content: " ";  
+    float: right;
+
+    background: url('../images/no-translate-detected_318-37504.jpg') no-repeat left bottom; 
+    background-size: 0.65em; 
+    /*display: block;*/  
+    height: 1em;  
+    width: 1.1em; 
+}
+div.bucket a::before{
+    content: "";  
+    float: left;
+
+    background: #fff url('../images/shopping-cart-1_318-10653.jpg')  no-repeat; 
+    background-size: 1.5em;	 
+  
+    /*display: block;*/ 
+    height: 1.5em;  
+    width: 1.5em; 
+}
+div.bucket a:hover {
+    border: solid 1px red;
+	text-decoration: none;
+}
+/*Horizontal Navigation bar with drop-menu*/
+ul.info-menu {
+	clear: both;
+	list-style-type: none;
+	padding: 0;
+	margin: 0 0 0 20px;
+	background-color: #f1f1f1;
+	
+}
+ul.info-menu li {
+	padding: 0;
+	margin: 1px;
+	float: left;
+	/*display: block;  For .dropdown */
+	/*position: relative;  For .dropdown */
+}
+ul.info-menu li a {	
+	display: inline-block; /*Make a block. Full clickable area.*/
+	padding: 0 5px;
+    border: none; /*button*/
+	cursor: pointer; /*button*/
+	width: 100%; /*button*/
+	font-size: 0.75em;
+	text-align: left; /*button*/
+	color: #6600ff;
+}
+#question::before {
+    content: " ";  
+    /*font-size: 20pt; */ 
+    /*text-align: center; */ 
+    /*line-height: 17px; */ 
+    /*color: #fff;*/  
+    float: left;  
+    position: relative;  
+    /*border-radius: 25px;*/  
+  
+    background: url('../images/sign-question-icon_34359.png') no-repeat; 
+    background-size: 17px;	
+  
+    display: block;  
+    height: 18px;  
+    width: 18px;  
+}  
+ul.info-menu li a:hover{
+	text-decoration: none;
+    color: #944dff;
+}
+
+nav {
+	clear: both;
+}
+
+
+
+
+@media only screen and (max-width: 1000px){
+	/*Header*/
+ 	.logo{
+	   font-size: 0.75em;
+		margin-top: 1em;
+    }
+	.search p span{
+	    font-size: 1em;
+		font-weight: normal;
+    }
+    .online-help {
+		display: none;
+	}
+	.entrance-bucket{
+	   font-size: 0.7em;
+    }
+	.entrance-bucket #entrance span:first-child{
+	    display: none;
+    }	
+	.entrance-bucket #entrance span:last-child{
+	    display: inline;
+    }
+	.info-menu{
+		display: none;
+	}
+
+}
+@media only screen and (max-width: 600px){ 
+    /*Header*/
+ 	.logo{
+	    font-size: 0.6em;
+		margin-left: 0;
+    }
+    #search-form{
+	    font-size: 1em;
+    }
+	.search{
+	    margin-left: 0;
+    }
+	
+}	
