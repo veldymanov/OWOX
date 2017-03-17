@@ -223,6 +223,7 @@ nav {
     }
 	.search p em span{
 	    font-size: 1em;
+		-webkit-font-weight: normal;
 		font-weight: normal;
     }
     .online-help {
