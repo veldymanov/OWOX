@@ -45,7 +45,7 @@ header, main, nav, footer{
 	font-size: 1.5em;
 	font-weight: bold;
 }
-.search p a:nth-child(1){
+.search p sup a:nth-child(1){
 	margin-left: 10px;
 	font-style: italic;
 	vertical-align: 0.81em;
@@ -54,7 +54,7 @@ header, main, nav, footer{
     border-width: 0 0 2px 0;
 
 }
-.search p a:nth-child(1):hover{
+.search p sup a:nth-child(1):hover{
 	border-width: 0;
 }
 #search-form{
@@ -64,8 +64,9 @@ header, main, nav, footer{
     border: 1px solid #d9d9d9;
     border-radius: 5px 2px;
 	font-size: 1.1em;
-	padding: 1px 3.375em 1px 0.35em;
+	padding: 1px 54px 1px 6px;
 	width:100%;
+	height: 24px;
 	
 	-ms-transform: skewX(-17deg); /* IE 9 */
     -webkit-transform: skewX(-17deg); /* Safari */
@@ -76,9 +77,9 @@ header, main, nav, footer{
 	background-color: #fff;
 	padding: 0 0 0 5px;
     border-radius: 5px 1px;
-	width: 3em;
-	height:1.05em; 
-	font-size: 1.3em;
+	width: 48px;
+	height:20px; 
+	font-size: 20px;
 	position: absolute;
 	top: 2px;
 	right: 2px;
@@ -223,7 +224,6 @@ nav {
     }
 	.search p em span{
 	    font-size: 1em;
-		-webkit-font-weight: normal;
 		font-weight: normal;
     }
     .online-help {
