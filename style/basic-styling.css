@@ -326,7 +326,6 @@ nav {
 
 /*-----------------section.sales-box------------*/
 .sales-box{
-  clear: both;
   padding:0;
   margin-top: 20px;
   position: relative;
@@ -337,7 +336,7 @@ nav {
   padding: 0;
   margin: 0; 
   position: relative;
-  top: 0.5px;
+  top: 1px;
   z-index: 2;
 }
 
@@ -351,7 +350,7 @@ nav {
 
 .sales-box ul li a {
   display: inline-block;
-  padding: 0.5em 0 0.5em 0;
+  padding: 8px 0 8px 0;
   text-decoration: none;
   width: 100%;
   color: #4d4dff;
@@ -365,7 +364,7 @@ nav {
 }
 .sales-box ul li a:focus, .sales-box ul li a:hover {
   border: 1px solid #00cccc;
-  border-radius: 5px 5px 0 0;
+  border-radius: 7px 7px 0 0;
   border-bottom: 0;
   background-color: white;
   color: red;
