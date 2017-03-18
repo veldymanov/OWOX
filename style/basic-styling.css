@@ -345,12 +345,11 @@ nav {
   margin: 0;
   padding: 0;
   list-style-type: none;
-  width: 141px;
 }
 
 .sales-box ul li a {
   display: inline-block;
-  padding: 8px 0 8px 0;
+  padding: 10px;
   text-decoration: none;
   width: 100%;
   color: #4d4dff;
