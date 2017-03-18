@@ -5,46 +5,51 @@ html {
 }
 body {
   max-width: 1200px;
-  min-width: 400px;
+  min-width: 600px;
   margin: 0 auto;
+  padding-left: 20px;
   background-color: white;
   
 }
 /*For old browsers*/
-header, main, nav, footer{
+header, main, nav, section, footer{
    display: block;	
 }
 
-/*Header*/
+/*-----------------------------------Header-----------------------------------------------*/
 .logo, .search, .online-help {
 	float: left;
 }
+
 .entrance-bucket{
 	float: right;
 	margin: 1em 1.25em;
 }
-.logo {
-	margin-left: 1.25em;
-}
+
 .search{
 	margin-left: 2%;
 }
+
 .online-help {
 	margin-left: 2%;
 }
+
 /*div.logo*/
 .logo img{
 	width: 9.375em;
 	height: 6.25em;
 }
+
 /*div.search*/
 .search p em{
 	font-size: 1.5em;	
 }
+
 .search p em span{
 	font-size: 1.5em;
 	font-weight: bold;
 }
+
 .search p sup a:nth-child(1){
 	margin-left: 10px;
 	font-style: italic;
@@ -54,12 +59,15 @@ header, main, nav, footer{
     border-width: 0 0 2px 0;
 
 }
+
 .search p sup a:nth-child(1):hover{
 	border-width: 0;
 }
+
 #search-form{
 	position: relative;
 }
+
 #search-form input[type=text] {
     border: 1px solid #d9d9d9;
     border-radius: 5px 2px;
@@ -72,6 +80,7 @@ header, main, nav, footer{
     -webkit-transform: skewX(-17deg); /* Safari */
     transform: skewX(-17deg); /* Standard syntax */
 }
+
 #search-form input[type=submit] {
     border: 1px solid #d9d9d9;
 	background-color: #fff;
@@ -90,10 +99,12 @@ header, main, nav, footer{
 	
 
 }
+
 /*div.online-help*/
 .online-help img{
 	width: 150px;
 }
+
 /*div.entrance-bucket*/
 .entrance-bucket #entrance{
     font-size: 15px;	
@@ -101,12 +112,15 @@ header, main, nav, footer{
 	border-bottom-style: dotted;
     border-width: 0 0 2px 0;
 }
+
 .entrance-bucket #entrance:hover{
 	border-width:0;
 }
+
 .entrance-bucket #entrance span:last-child{
 	display:none;
 }
+
 #entrance::before{
     content: " ";  
     float: left;  
@@ -118,6 +132,7 @@ header, main, nav, footer{
     height: 25px;  
     width: 25px; 
 }
+
 div.bucket {	
 	margin: 0.9375em auto;
 	width: 12.5em;
@@ -126,6 +141,7 @@ div.bucket {
 	border-radius: 5px;
 	
 }
+
 div.bucket a{
 	display: inline-block;/* Make a block. Full clickable area.*/
     border: none; /*button*/
@@ -136,6 +152,7 @@ div.bucket a{
 	padding: 0.35em 0.5em 0 0.5em;
 	font-size: 1.5em;
 }
+
 div.bucket a::after{
     content: " ";  
     float: right;
@@ -146,6 +163,7 @@ div.bucket a::after{
     height: 1em;  
     width: 1.1em; 
 }
+
 div.bucket a::before{
     content: "";  
     float: left;
@@ -157,10 +175,12 @@ div.bucket a::before{
     height: 1.5em;  
     width: 1.5em; 
 }
+
 div.bucket a:hover {
     border: solid 1px red;
 	text-decoration: none;
 }
+
 /*Horizontal Navigation bar with drop-menu*/
 ul.info-menu {
 	clear: both;
@@ -214,8 +234,88 @@ nav {
 }
 
 
+/*------------------------------------- main---------------------------------------------------*/
+.first-section{
+	padding: 0;
+	margin:0;
+}
+.info-box {
+  width: 70%;
+  height: 250px;
+  position: relative;
+  top: 0; 
+  clear: both;
+}
 
+.info-box .panels {
+  height: 100%;
+  position: relative;
+}
 
+.info-box .panels  div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 5px solid #00cccc;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  /*color: white;*/
+  background-color: white;
+}
+
+.info-box .active-panel {
+  z-index: 1;
+}
+/*Styling tabs*/
+.info-box ul {
+  padding-left: 10px;
+  margin-top: 0; 
+  position: relative;
+  top: -5px;
+  z-index: 1;
+}
+
+.info-box ul li {
+  float: left;
+  list-style-type: none;
+  width: 20px;
+  margin-right: 2px;
+}
+
+.info-box ul li a {
+  display: inline-block;
+  text-decoration: none;
+  width: 100%;
+  border: 1px solid #00cccc;
+  border-top: 0;
+  border-radius: 0 0 5px 5px ;
+  line-height: 2;
+  background-color: #00cccc;
+  color: white;
+  font-size: 0.9em;
+  font-weight: bold;
+  text-align: center;
+  
+}
+
+.info-box ul li a:focus, .info-box ul li a:hover {
+  background-color: white;
+  color: red;
+}
+
+.info-box ul li a.active {
+  background-color: white;
+  color: red;
+}
+
+/*-------------------------------------Footer---------------------------------------------------*/
+footer {
+	clear: both;
+}
+
+/*-------------------------------------Responsive---------------------------------------------------*/
 @media only screen and (max-width: 1000px){
 	/*Header*/
  	.logo{
