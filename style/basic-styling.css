@@ -15,6 +15,9 @@ body {
 header, main, nav, section, footer{
    display: block;	
 }
+.clearfix {
+  clear: both;
+}
 
 /*-----------------------------------Header-----------------------------------------------*/
 .logo, .search, .online-help {
@@ -183,7 +186,6 @@ div.bucket a:hover {
 
 /*Horizontal Navigation bar with drop-menu*/
 ul.info-menu {
-	clear: both;
 	list-style-type: none;
 	padding: 0;
 	margin: 0 0 0 20px;
@@ -230,7 +232,7 @@ ul.info-menu li a:hover{
 }
 
 nav {
-	clear: both;
+	
 }
 
 
@@ -239,19 +241,16 @@ nav {
 .first-section{
 	padding:0;
 	margin:0;
-    clear: both;
-	height: 250px;
 }
 .info-box {
   width: 70%;
-  height: 100%;
   position: relative;
   top: 0; 
   float: left;
 }
 
 .info-box .panels {
-  height: 85%;
+  height: 250px;
   position: relative;
 }
 
@@ -325,14 +324,95 @@ nav {
 }
 
 
-/*-----------------section.second-section-------------*/
-.second-section{
-    clear: both;
+/*-----------------section.sales-box------------*/
+.sales-box{
+  clear: both;
+  padding:0;
+  margin-top: 20px;
+  position: relative;
+}
+
+/*Styling tabs*/
+.sales-box ul {
+  padding: 0;
+  margin: 0; 
+  position: relative;
+  top: 0.5px;
+  z-index: 2;
+}
+
+.sales-box ul li {
+  float: left;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  width: 141px;
+}
+
+.sales-box ul li a {
+  display: inline-block;
+  padding: 0.5em 0 0.5em 0;
+  text-decoration: none;
+  width: 100%;
+  color: #4d4dff;
+  font-size: 0.9em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.sales-box ul li a span{
+	border-bottom: 1px dotted #4d4dff;
+}
+.sales-box ul li a:focus, .sales-box ul li a:hover {
+  border: 1px solid #00cccc;
+  border-radius: 5px 5px 0 0;
+  border-bottom: 0;
+  background-color: white;
+  color: red;
+}
+
+.sales-box ul li a:hover  span{
+	border: 0;
+}
+
+.sales-box ul li a.active-sales {
+  border: 1px solid #00cccc;
+  border-radius: 5px 5px 0 0;
+  border-bottom: 0;
+  background-color: white;
+  color: red;
+}
+
+.sales-box ul li a.active-sales  span{
+	border: 0;
+}
+
+.sales-box .sales-panels {
+  position: relative;
+  height: 250px;
+  clear: both;
+}
+
+.sales-box .sales-panels  div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid #00cccc;
+  border-radius: 3px;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  /*color: white;*/
+  background-color: white;
+}
+
+.sales-box .active-sales-panel {
+  z-index: 1;
 }
 
 /*-------------------------------------Footer---------------------------------------------------*/
 footer {
-	clear: both;
+
 }
 
 /*-------------------------------------Responsive---------------------------------------------------*/

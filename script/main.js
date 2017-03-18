@@ -8,33 +8,45 @@ if(testElem.style.flex !== undefined && testElem.style.flexFlow !== undefined) {
 }
 
 //-----------------------------------info-box-----------------------------------------
-
 var tabs = document.querySelectorAll('.info-box li a');
 var panels = document.querySelectorAll('.info-box .panels div');
 
 
 for(let i = 0, l = tabs.length; i < l; i++) { 
-  var tab = tabs[i];
-  setTabHandler(tab, i);
+  let tab = tabs[i];
+  setTabHandler(tab, i, 'active', 'active-panel', tabs, panels);
 }
 
-function setTabHandler(tab, tabPos) {
+//-----------------------------------sales-box-----------------------------------------
+var tabs1 = document.querySelectorAll('.sales-box li a');
+var panels1 = document.querySelectorAll('.sales-box .sales-panels div');
+
+
+for(let i = 0, l = tabs1.length; i < l; i++) { 
+  let tab = tabs1[i];
+  setTabHandler(tab, i, 'active-sales', 'active-sales-panel', tabs1, panels1);
+}
+
+//-------------------------------------------------------------------------------------
+
+function setTabHandler(tab, tabPos, active, activePanel, tabs$, panels$) { 
   tab.onclick = function() {
-    for(let i = 0, l = tabs.length; i < l; i++) {
-      if(tabs[i].getAttribute('class')) {
-        tabs[i].removeAttribute('class');
+    for(let i = 0, l = tabs$.length; i < l; i++) {
+      if(tabs$[i].getAttribute('class')) {
+        tabs$[i].removeAttribute('class');
       }
     }
 
-    tab.setAttribute('class', 'active');
+    tab.setAttribute('class', active);
 
-    for(let i = 0, l = tabs.length; i < l; i++) {
-      if(panels[i].getAttribute('class')) {
-        panels[i].removeAttribute('class');
+    for(let i = 0, l = panels$.length; i < l; i++) {
+      if(panels$[i].getAttribute('class')) {
+        panels$[i].removeAttribute('class');
       }
     }
 	
-    panels[tabPos].setAttribute('class', 'active-panel');
+    panels$[tabPos].setAttribute('class', activePanel);
   }
 }
 //--------------------------------------------------------------------------------
+
