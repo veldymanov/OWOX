@@ -13,14 +13,14 @@ var tabs = document.querySelectorAll('.info-box li a');
 var panels = document.querySelectorAll('.info-box .panels div');
 
 
-for(var i = 0, l = tabs.length; i < l; i++) { 
+for(let i = 0, l = tabs.length; i < l; i++) { 
   var tab = tabs[i];
   setTabHandler(tab, i);
 }
 
 function setTabHandler(tab, tabPos) {
   tab.onclick = function() {
-    for(var i = 0, l = tabs.length; i < l; i++) {
+    for(let i = 0, l = tabs.length; i < l; i++) {
       if(tabs[i].getAttribute('class')) {
         tabs[i].removeAttribute('class');
       }
@@ -28,7 +28,7 @@ function setTabHandler(tab, tabPos) {
 
     tab.setAttribute('class', 'active');
 
-    for(var i = 0, l = tabs.length; i < l; i++) {
+    for(let i = 0, l = tabs.length; i < l; i++) {
       if(panels[i].getAttribute('class')) {
         panels[i].removeAttribute('class');
       }
