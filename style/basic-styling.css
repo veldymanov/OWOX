@@ -23,7 +23,7 @@ header, main, nav, section, footer{
 
 .entrance-bucket{
 	float: right;
-	margin: 1em 1.25em;
+	margin: 1.5em 0 0 0;
 }
 
 .search{
@@ -135,7 +135,7 @@ header, main, nav, section, footer{
 
 div.bucket {	
 	margin: 0.9375em auto;
-	width: 12.5em;
+	width: 12em;
 	height: 3.125em;
 	border: 1px solid #d9d9d9;
 	border-radius: 5px;
@@ -337,10 +337,11 @@ footer {
 
 /*-------------------------------------Responsive---------------------------------------------------*/
 @media only screen and (max-width: 1000px){
+	    body { padding: 10px;}
 	/*----Header-----*/
  	.logo{
-	   font-size: 0.75em;
-		margin-top: 1em;
+	   font-size: 0.7em;
+		margin-top: 1.5em;
     }
 	.search p em span{
 	    font-size: 1em;
@@ -350,7 +351,7 @@ footer {
 		display: none;
 	}
 	.entrance-bucket{
-	   font-size: 0.7em;
+	   font-size: 0.8em;
     }
 	.entrance-bucket #entrance span:first-child{
 	    display: none;
@@ -377,7 +378,6 @@ footer {
     /*----Header-----*/
  	.logo{
 	    font-size: 0.6em;
-		margin-left: 0;
     }
     #search-form{
 	    font-size: 1em;
