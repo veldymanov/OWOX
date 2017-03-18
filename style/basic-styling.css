@@ -5,7 +5,7 @@ html {
 }
 body {
   max-width: 1200px;
-  min-width: 600px;
+  min-width: 400px;
   margin: 0 auto;
   padding-left: 20px;
   background-color: white;
@@ -235,20 +235,23 @@ nav {
 
 
 /*------------------------------------- main---------------------------------------------------*/
+/*---------section.first-section---section.info-box------*/
 .first-section{
-	padding: 0;
+	padding:0;
 	margin:0;
+    clear: both;
+	height: 250px;
 }
 .info-box {
   width: 70%;
-  height: 250px;
+  height: 100%;
   position: relative;
   top: 0; 
-  clear: both;
+  float: left;
 }
 
 .info-box .panels {
-  height: 100%;
+  height: 85%;
   position: relative;
 }
 
@@ -310,6 +313,23 @@ nav {
   color: red;
 }
 
+/*---------section.first-section---aside.info-sale------*/
+.info-sale{
+	margin:0;
+	padding: 0 0 0 1em;
+	width: 30%;
+	/*height:100%;*/
+    border: 1px solid #00cccc;
+	float: right;
+	
+}
+
+
+/*-----------------section.second-section-------------*/
+.second-section{
+    clear: both;
+}
+
 /*-------------------------------------Footer---------------------------------------------------*/
 footer {
 	clear: both;
@@ -317,7 +337,7 @@ footer {
 
 /*-------------------------------------Responsive---------------------------------------------------*/
 @media only screen and (max-width: 1000px){
-	/*Header*/
+	/*----Header-----*/
  	.logo{
 	   font-size: 0.75em;
 		margin-top: 1em;
@@ -341,10 +361,18 @@ footer {
 	.info-menu{
 		display: none;
 	}
+	
+	/*----main-----*/
+	.info-box{
+		width:60%;
+	}
+	.info-sale {
+		width:40%;
+	}
 
 }
 @media only screen and (max-width: 600px){ 
-    /*Header*/
+    /*----Header-----*/
  	.logo{
 	    font-size: 0.6em;
 		margin-left: 0;
@@ -355,5 +383,13 @@ footer {
 	.search{
 	    margin-left: 0;
     }
+	
+	/*----main-----*/
+	.info-box{
+		width:100%;
+	}
+	.info-sale {
+		width: 100%
+	}	
 	
 }	
