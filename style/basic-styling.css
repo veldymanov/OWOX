@@ -372,7 +372,7 @@ footer {
 
 }
 @media only screen and (max-width: 600px){ 
-    body { padding: 0 0 0 0;} 	 
+    body { padding: 0;} 	 
 	 
     /*----Header-----*/
  	.logo{
