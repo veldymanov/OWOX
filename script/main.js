@@ -23,8 +23,8 @@ function closeMobileMenu(){
 }
 
 //-----------------------------------info-box-----------------------------------------
-var tabs = document.querySelectorAll('.info-box>ul li a');
-var panels = document.querySelectorAll('.info-box .panels>div');
+var tabs = document.querySelectorAll('.info-box > ul li a');
+var panels = document.querySelectorAll('.info-box .panels > div');
 
 
 for(let i = 0, l = tabs.length; i < l; i++) { 
@@ -45,22 +45,22 @@ for(let i = 0, l = tabs1.length; i < l; i++) {
 //-------------------------------------------------------------------------------------
 
 function setTabHandler(tab, tabPos, tabs$, panels$) { 
-  tab.onclick = function() {
-    for(let i = 0, l = tabs$.length; i < l; i++) {
-      if(tabs$[i].getAttribute('class')) {
-        tabs$[i].removeAttribute('class');
+  tab.onclick = function() { debugger
+    for(let i = 0, l = tabs$.length; i < l; i++) { 
+      if(tabs$[i].classList.contains('active')) {        //.getAttribute('class')
+        tabs$[i].classList.remove('active');             //.removeAttribute('class')
       }
     }
 
-    tab.setAttribute('class', 'active');
+    this.classList.add('active');                          //tab.setAttribute('class', 'active');
 
     for(let i = 0, l = panels$.length; i < l; i++) {
-      if(panels$[i].getAttribute('class')) {
-        panels$[i].removeAttribute('class');
+      if(panels$[i].classList.contains('active-panel')) { //.getAttribute('class')
+        panels$[i].classList.remove('active-panel');      //.removeAttribute('class');
       }
     }
 	
-    panels$[tabPos].setAttribute('class', 'active-panel');
+    panels$[tabPos].classList.add('active-panel');        //.setAttribute('class', 'active-panel');
   }
 }
 //--------------------------------------------------------------------------------
