@@ -1,416 +1,278 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta charset='utf-8' />
+	<meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1' />
 	<title>OWOX</title>
-	<!--[if lt IE 9]>
-		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->	
-	<link rel="shortcut icon" href="images/livelink-shop-logo.png" type="image/x-icon">
-	<link rel="stylesheet" href="style/normalize.css" />
-	<link href="style/basic-styling.css" rel="stylesheet" type="text/css">
+	
+	<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat:400,400i,700' />
+	<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:400,400i,700'  />
+	<link rel='shortcut icon' href='images/livelink-shop-logo.png' type='image/x-icon'>
+	<link rel='stylesheet' href='style/normalize.css' />
+	<link rel='stylesheet' href='style/basic-styling.css'  type='text/css'>
+
   </head>
   
   <body>
-    <header>     
-		<h1 class="logo">
-			<a href="javascript:void(0);" title="Перейти на главную">The LiveLinkShop</a>
-		</h1>	  
-		<div class="search">
-			<p>(044) <span>555-00-00</span> <a href="javascript:void(0);">Обратный звонок</a> </p>
-		
-			<form id="search-form" action="search-results.html" method="POST">      
-				<input type="text" name="search" placeholder="Поиск">
-				<input type="submit" class="submit" value=""> 
-			</form>
-		</div>	  
-		<div class="online-help">
-			<a href="javascript:void(0);" title="Задать вопрос специалиту.">Online-help</a>
-		</div>	  
-		<div class="entrance-bucket">
-			<div class="entrance">
-				<a  href="javascript:void(0);"><span>Вход для постоянных клиентов</span><span>	Вход</span></a>
-			</div>		
-			<div class="bucket clearfix">
-				<a href="javascript:void(0);">Корзина</a>
-			</div>
-		</div>	
-		<div class="clearfix"></div>			 		
-		<nav class="info-menu clearfix"><!---------------Top Navigator--------->
-			<ul>
-				<li><a href="javascript:void(0);">О магазине</a></li>
-				<li><a href="javascript:void(0);">Адреса и телефоны</a></li>
-				<li><a href="javascript:void(0);">Акции</a></li>
-				<li><a href="javascript:void(0);">Новости</a></li>
-				<li><a href="javascript:void(0);">Статьи и обзоры</a></li>
-				<li><a href="javascript:void(0);" class="question" >Помощь</a></li>
-				<li><a href="javascript:void(0);">Доставка и оплата</a></li>
-				<li><a href="javascript:void(0);">Гарантия и сервис</a></li>	
+    <header class='head'>
+		<div class='head-top clearfix'>
+			<h1 class="logo">
+				<a class='logo-link' href='#' title='Перейти на главную'>The LiveLinkShop</a>
+			</h1>	
+			
+			<div class='search'>
+				<p class='search-info'>(044) 
+					<span class='search-info-phone'>555-00-00</span> 
+					<a class='search-info-link' href='#'>Обратный звонок</a>
+				</p>
+			
+				<form class='search-form' action="" method='POST'>      
+					<input class='search-form-input' type='text' placeholder='Поиск' />
+					<input class='search-form-submit' type='submit' value='' /> 
+				</form>
+			</div>	
+			
+			<div class='online-help'>
+				<a class='online-help-link' href='#' title='Задать вопрос специалиту.'>Online-help</a>
+			</div>	
+			
+			<div class='head-top-right clearfix'>
+				<div class='entrance'>
+					<a class='entrance-link' href='#'><span>Вход для постоянных клиентов</span><span>Вход</span></a>
+				</div>	
+				
+				<div class='buscket clearfix'>
+					<span class='buscket-quantity'>3</span>
+					<a class='buscket-link' href='javascript:void(0)'>Корзина</a>
+				</div>
+			</div>	
+		</div>
+			
+		<nav class="head-navigation">
+			<ul class="menu clearfix">
+				<li class='menu-item'><a class='menu-item-link' href='javascript:void(0)'>О магазине</a></li>
+				<li class='menu-item'><a class='menu-item-link' href='javascript:void(0)'>Адреса и телефоны</a></li>
+				<li class='menu-item'><a class='menu-item-link' href='javascript:void(0)'>Акции</a></li>
+				<li class='menu-item'><a class='menu-item-link' href='javascript:void(0)'>Новости</a></li>
+				<li class='menu-item'><a class='menu-item-link' href='javascript:void(0)'>Статьи и обзоры</a></li>
+				<li class='menu-item'><a class='menu-item-link question' href='javascript:void(0)'>Помощь</a></li>
+				<li class='menu-item'><a class='menu-item-link' href='javascript:void(0)'>Доставка и оплата</a></li>
+				<li class='menu-item'><a class='menu-item-link' href='javascript:void(0)'>Гарантия и сервис</a></li>	
 			</ul>	
 		</nav>	   		  
-    </header> 
-    <main>	
-		<nav> <!------------Dropdown navigator---------------->
-			<ul class="dropnav clearfix">
-				<li class="menuCloseBtn">
-					<a href="javascript:void(0)">&times;</a>
-				</li>
-				<li class="dropdown">
-					<a href="javascript:void(0);">ПК и Серверы <br>Prime PC</a>
-					<div class="dropdown-content">
-						<a href="javascript:void(0);">Left 1.1</a>
-						<a href="javascript:void(0);">Left 1.2</a>
-						<a href="javascript:void(0);">Left 1.3</a>
+    </header>  
+
+    <main class='content'>	
+		<nav class='main-navigation'> 
+			<ul class='dropnav clearfix js-dropnav'>
+				<li class='closeBtn'>
+					<a class='closeBtn-link js-closeBtn-link' href='javascript:void(0)'>&times;</a>
+				</li>		
+				
+				<li class='dropnav-item'>
+					<a class='dropnav-item-link' href='javascript:void(0);'>ПК и Серверы Prime PC</a>
+					<div class='dropnav-item-content'>
+						<a href='javascript:void(0);'>Left 1.1</a>
+						<a href='javascript:void(0);'>Left 1.2</a>
+						<a href='javascript:void(0);'>Left 1.3</a>
 					</div>
 				</li >
-				<li class="dropdown">
-					<a href="#">Компьютеры <br>и периферия</a>
-					<div class="dropdown-content">
-						<a href="javascript:void(0);">Left 2.1</a>
-						<a href="javascript:void(0);">Left 2.2</a>
-						<a href="javascript:void(0);">Left 2.3</a>
+				<li class='dropnav-item'>
+					<a class='dropnav-item-link' href='javascript:void(0);'>Компьютеры и периферия</a>
+					<div class='dropnav-item-content'>
+						<a href='javascript:void(0);'>Left 2.1</a>
+						<a href='javascript:void(0);'>Left 2.2</a>
+						<a href='javascript:void(0);'>Left 2.3</a>
 					</div>
 				</li>
-				<li class="dropdown">
-					<a href="#">Программное <br>обеспечение</a>
-					<div class="dropdown-content">
-						<a href="javascript:void(0);">Left 3.1</a>
-						<a href="javascript:void(0);">Left 3.2</a>
-						<a href="javascript:void(0);">Left 3.3</a>
+				<li class='dropnav-item'>
+					<a class='dropnav-item-link' href='javascript:void(0);'>Программное обеспечение</a>
+					<div class='dropnav-item-content'>
+						<a href='javascript:void(0);'>Left 3.1</a>
+						<a href='javascript:void(0);'>Left 3.2</a>
+						<a href='javascript:void(0);'>Left 3.3</a>
 					</div>
 				</li>
-				<li class="dropdown">
-					<a href="javascript:void(0);">Сети и теле-<br>коммуникации</a>
-					<div class="dropdown-content">
-						<a href="javascript:void(0);">Left 4.1</a>
-						<a href="javascript:void(0);">Left 4.2</a>
-						<a href="javascript:void(0);">Left 4.3</a>
+				<li class='dropnav-item'>
+					<a class='dropnav-item-link' href="javascript:void(0);">Сети и теле- коммуникации</a>
+					<div class='dropnav-item-content'>
+						<a href='javascript:void(0);'>Left 4.1</a>
+						<a href='javascript:void(0);'>Left 4.2</a>
+						<a href='javascript:void(0);'>Left 4.3</a>
 					</div>
 				</li>
-				<li class="dropdown">
-					<a href="javascript:void(0);">Системы <br>безопасности</a>
-					<div class="dropdown-content">
-						<a href="javascript:void(0);">Left 5.1</a>
-						<a href="javascript:void(0);">Left 5.2</a>
-						<a href="javascript:void(0);">Left 5.3</a>
+				<li class='dropnav-item'>
+					<a class='dropnav-item-link' href="javascript:void(0);">Системы безопасности</a>
+					<div class='dropnav-item-content'>
+						<a href='javascript:void(0);'>Left 5.1</a>
+						<a href='javascript:void(0);'>Left 5.2</a>
+						<a href='javascript:void(0);'>Left 5.3</a>
 					</div>
 				</li>
-				<li class="dropdown">
-					<a href="javascript:void(0);">Бесперебойная <br>работа</a>
-					<div class="dropdown-content">
-						<a href="javascript:void(0);">Left 6.1</a>
-						<a href="javascript:void(0);">Left 6.2</a>
-						<a href="javascript:void(0);">Left 6.3</a>
+				<li class='dropnav-item'>
+					<a class='dropnav-item-link' href='javascript:void(0);'>Бесперебойная работа</a>
+					<div class='dropnav-item-content'>
+						<a href='javascript:void(0);'>Left 6.1</a>
+						<a href='javascript:void(0);'>Left 6.2</a>
+						<a href='javascript:void(0);'>Left 6.3</a>
 					</div>
 				</li>		
 			</ul>
-			<ul class="dropnav clearfix">
-				<li class="dropdown">
-					<a href="javascript:void(0);">ПК и Серверы Prime PC</a>
-				</li >
-				<li class="menuOpenBtn">
-					<a href="#" > menu open button</a>
-				</li>				
-			</ul>
-		</nav>		
-		<section class="info-section clearfix">
+			
+			<ul class='mobnav clearfix'>
+				<li class='openBtn'>
+					<a class='openBtn-link js-openBtn-link' href='javascript:void(0);' > menu open button</a>
+				</li>	
+			
+				<li class='mobnav-item dropnav-item'>
+					<a class='dropnav-item-link js-mobnav-item-link' href='javascript:void(0);'>ПК и Серверы Prime PC</a>
+				</li>
+			</ul>				
+		</nav>	
+		
+		<section class="info clearfix">
 			<section class="info-box">
-				<div class="panels">
-					<div>
+				<ul class="panels">
+					<li class='panel js-panel'>
 						<h2>Иновационные решения 1</h2> 
-					</div>
-					<div class="active-panel">					
+					</li>
+					<li class='panel js-panel is-active'>					
 						<h2>Иновационные решения Cisco Catalist Switches</h2>
-						<p>Постройте свою безгрничную сеть с уникальным предложением безопасных и надежных 	решений</p>					
-						<div class="button info-box-button">
-							<a href="javascript:void(0);">Ознакомиться с решением</a>
+						<p>Постройте свою безграничную сеть с уникальным предложением безопасных и надежных решений</p>					
+						<div class='panels-button'>
+							<a class='panels-button-link' href="javascript:void(0);">Ознакомиться с решением</a>
 						</div>					
-					</div>	
-					<div>
+					</li>	
+					<li class='panel js-panel'>
 						<h2>Иновационные решения 3</h2> 
-					</div>
-					<div>
+					</li>
+					<li class='panel js-panel'>
 						<h2>Иновационные решения 4</h2> 
-					</div>
-					<div>
+					</li>
+					<li class='panel js-panel'>
 						<h2>Иновационные решения 5</h2> 
-					</div>				  
-				</div>		
-				<ul class="clearfix">
-					<li><a href="javascript:void(0);">1</a></li>
-					<li><a href="javascript:void(0);" class="active">2</a></li>
-					<li><a href="javascript:void(0);">3</a></li>
-					<li><a href="javascript:void(0);">4</a></li>
-					<li><a href="javascript:void(0);">5</a></li>		  
+					</li>				  
+				</ul>	
+				
+				<ul class='panels-nav clearfix'>
+					<li class='panels-nav-item js-panels-nav-item'>
+						<a class='panels-nav-item-link js-panels-nav-item-link' href='javascript:void(0);'>1</a>
+					</li>
+					<li class='panels-nav-item js-panels-nav-item is-active'>
+						<a class='panels-nav-item-link js-panels-nav-item-link' href='javascript:void(0);'>2</a>
+					</li>
+					<li class='panels-nav-item js-panels-nav-item'>
+						<a class='panels-nav-item-link js-panels-nav-item-link' href='javascript:void(0);'>3</a>
+					</li>
+					<li class='panels-nav-item js-panels-nav-item'>
+						<a class='panels-nav-item-link js-panels-nav-item-link' href='javascript:void(0);'>4</a>
+					</li>
+					<li class='panels-nav-item js-panels-nav-item'>
+						<a class='panels-nav-item-link js-panels-nav-item-link' href='javascript:void(0);'>5</a>
+					</li>		  
 				</ul>		
-			</section> 		
-			<aside class="info-sale">
-				<h2>Акции</h2>				
-				<ul class="clearfix">
-					<li><a href="javascript:void(0);">Коробочные продукты "Лаборатории Касперского"</a> без увеличения стоимости!</li>
-					<li><a href="javascript:void(0);">Специальные цены на ADDY FineReader</a> 10 professinal edition!</li>
-					<li><a href="javascript:void(0);">Скидка до 80% на программные продукты</a> Microsoft для академических пользователей и научных учереждений</li>
-				</ul>			
-				<div class="button-skew">
-					<a href="javascript:void(0);">Все акции</a>
+			</section> 	
+			
+			<aside class='info-aside'>
+				<h2>Акции</h2>
+				
+				<ul class='discount clearfix'>
+					<li class='discount-item'>
+						<p><a href="javascript:void(0);">Коробочные продукты "Лаборатории Касперского"</a> без увеличения стоимости!</p>
+					</li>
+					<li class='discount-item'>
+						<p><a href="javascript:void(0);">Специальные цены на ADDY FineReader</a> 10 professinal edition</p>
+					</li>
+					<li class='discount-item'>
+						<p><a href="javascript:void(0);">Скидка до 80% на программные продукты</a> Microsoft для академических пользователей и научных учереждений</p>
+					</li>
+				</ul>	
+				
+				<div class='button-skew'>
+					<a class='button-skew-link' href="javascript:void(0);">Все акции</a>
 				</div>									
 			</aside>	
-		</section>
-		<section class="sales-section">
-			<ul class="clearfix">
-				<li><a href="javascript:void(0);" class="active"><span>Спецпредложения</span></a></li>
-				<li><a href="javascript:void(0);"><span>Бестселлеры</span></a></li>
-				<li><a href="javascript:void(0);"><span>Новинки</span></a></li>
-				<li><a href="javascript:void(0);"><span>Скоро в продаже</span></a></li>		  
-			</ul>					
-			<div class="sales-panels clearfix">
-				<div class="active-panel">
-					<h2>Иновационные решения 1</h2>
-				</div>
-				<div>
-					<h2>Иновационные решения 2</h2> 
-				</div>	
-				<div>
-					<h2>Иновационные решения 3</h2> 
-				</div>
-				<div>
-					<h2>Иновационные решения 4</h2> 
-				</div>				
-			</div>			
-		</section>
-		<nav class="brands clearfix">
-			<div class="button-skew">
-				<a href="javascript:void(0);">Все производители</a>
-			</div>
-			<h5>IT-решения и компьютерная техника ведущих мировых производителей</h5>
-			
-			<div class="brands-block clearfix">		
-				<div class="brands-button-block clearfix">			
-					<div class="brands-button">
-						<a href="javascript:void(0);">att</a>
-					</div>
-					<div class="brands-button">
-						<a href="javascript:void(0);">Toshiba</a>
-					</div>
-					<div class="brands-button">
-						<a href="javascript:void(0);">IBM</a>
-					</div>	
-					<div class="brands-button">
-						<a href="javascript:void(0);">Dell</a>
-					</div>												
-				</div>					
-				<div class="brands-button-block clearfix">
-					<div class="brands-button">
-						<a href="javascript:void(0);">Apple</a>
-					</div>
-					<div class="brands-button">
-						<a href="javascript:void(0);">Microsoft</a>
-					</div>
-					<div class="brands-button">
-						<a href="javascript:void(0);">Intel</a>
-					</div>	
-					<div class="brands-button">
-						<a href="javascript:void(0);">AMD</a>
-					</div>												
-				</div>				
-				<div class="brands-button-block clearfix">
-					<div class="brands-button">
-						<a href="javascript:void(0);">Cisco</a>
-					</div>
-					<div class="brands-button">
-						<a href="javascript:void(0);">Panasonic</a>
-					</div>
-					<div class="brands-button">
-						<a href="javascript:void(0);">Lenovo</a>
-					</div>	
-					<div class="brands-button">
-						<a href="javascript:void(0);">Asus</a>
-					</div>												
-				</div>					
-				<div class="brands-button-block clearfix">
-					<div class="brands-button">
-						<a href="javascript:void(0);">Nokia</a>
-					</div>
-					<div class="brands-button">
-						<a href="javascript:void(0);">Sumsung</a>
-					</div>
-					<div class="brands-button">
-						<a href="javascript:void(0);">Nec</a>
-					</div>	
-					<div class="brands-button">
-						<a href="javascript:void(0);">Kasperskiy</a>
-					</div>												
-				</div>	
-			</div>
-			
-			<div class="brandnames-block clearfix">
-				<div class="brandnames-subblock clearfix">
-					<ul class="brandnames">
-						<li><a href="javascript:void(0);">ACER</a></li>
-						<li><a href="javascript:void(0);">ADOBE</a></li>
-						<li><a href="javascript:void(0);">AMP NETCONNECT</a></li>
-						<li><a href="javascript:void(0);">APC</a></li>
-						<li><a href="javascript:void(0);">Apollo</a></li>
-						<li><a href="javascript:void(0);">Apple</a></li>
-						<li><a href="javascript:void(0);">ASSMAN</a></li>			
-					</ul>
-					<ul class="brandnames">
-						<li><a href="javascript:void(0);">AVAYA</a></li>
-						<li><a href="javascript:void(0);">BenQ</a></li>
-						<li><a href="javascript:void(0);">BOSH</a></li>
-						<li><a href="javascript:void(0);">CISCO</a></li>
-						<li><a href="javascript:void(0);">Dell</a></li>
-						<li><a href="javascript:void(0);">D-LINK</a></li>
-						<li><a href="javascript:void(0);">Dr.Web</a></li>			
-					</ul>
-				</div>
-				<div class="brandnames-subblock clearfix">
-					<ul class="brandnames">
-						<li><a href="javascript:void(0);">EPSON</a></li>
-						<li><a href="javascript:void(0);">ESSET</a></li>
-						<li><a href="javascript:void(0);">HP</a></li>
-						<li><a href="javascript:void(0);">HITACHI DATA SYSTEMS</a></li>
-						<li><a href="javascript:void(0);">IBM</a></li>
-						<li><a href="javascript:void(0);">INTEL</a></li>
-						<li><a href="javascript:void(0);">KINGSTON</a></li>			
-					</ul>	
-					<ul class="brandnames">
-						<li><a href="javascript:void(0);">LG ELECTRONICS</a></li>
-						<li><a href="javascript:void(0);">McAfee</a></li>
-						<li><a href="javascript:void(0);">MICROSOFT</a></li>
-						<li><a href="javascript:void(0);">MSI</a></li>
-						<li><a href="javascript:void(0);">NEC</a></li>
-						<li><a href="javascript:void(0);">OKI</a></li>
-						<li><a href="javascript:void(0);">ORACLE</a></li>	
-					</ul>				
-				</div>
-				<div class="brandnames-subblock clearfix">
-					<ul class="brandnames">
-						<li><a href="javascript:void(0);">PANASONIC</a></li>
-						<li><a href="javascript:void(0);">PROMPT</a></li>
-						<li><a href="javascript:void(0);">R&amp;M</a></li>
-						<li><a href="javascript:void(0);">SUMSUNG</a></li>
-						<li><a href="javascript:void(0);">TOSHIBA</a></li>
-						<li><a href="javascript:void(0);">VINET</a></li>
-						<li><a href="javascript:void(0);">VWware</a></li>			
-					</ul>	
-					<ul class="brandnames">
-						<li><a href="javascript:void(0);">z1</a></li>
-						<li><a href="javascript:void(0);">z2</a></li>
-						<li><a href="javascript:void(0);">z3</a></li>
-						<li><a href="javascript:void(0);">z4</a></li>
-						<li><a href="javascript:void(0);">z5</a></li>
-						<li><a href="javascript:void(0);">z6</a></li>
-						<li><a href="javascript:void(0);">z7</a></li>			
-					</ul>				
-				</div>	
-				<div class="brandnames-subblock clearfix">
-					<ul class="brandnames">
-						<li><a href="javascript:void(0);">z8</a></li>
-						<li><a href="javascript:void(0);">z9</a></li>
-						<li><a href="javascript:void(0);">z10</a></li>
-						<li><a href="javascript:void(0);">z11</a></li>
-						<li><a href="javascript:void(0);">z12</a></li>
-						<li><a href="javascript:void(0);">z13</a></li>
-						<li><a href="javascript:void(0);">z14</a></li>			
-					</ul>					
-					<ul class="brandnames">
-						<li><a href="javascript:void(0);">z15</a></li>
-						<li><a href="javascript:void(0);">z16</a></li>
-						<li><a href="javascript:void(0);">z17</a></li>
-						<li><a href="javascript:void(0);">z18</a></li>
-						<li><a href="javascript:void(0);">z19</a></li>
-						<li><a href="javascript:void(0);">z20</a></li>
-						<li><a href="javascript:void(0);">z21</a></li>			
-					</ul>
-				</div>	
-			</div>
+		</section>		
 
-		</nav>
-		<section class="articles">
-			<div class="button-skew">
-				<a href="javascript:void(0);">Другие статьи и обзоры</a>
-			</div>
-			<h3>Статьи и обзоры</h3>	
-			<div class="articles-block clearfix">	
-				<article>
-					<figure>
-						<img src="images/samsung-galaxy-r.jpg" alt="Sumsung Galaxy R">
-					</figure>
-					<h4><a href="javascript:void(0);">Обзор смартфона Sumsung Galaxy R</a></h4>
-					<p>Sumsung продолжает наращивать количество моделей в своей звездной серии смартфонов Galaxy. Впрочем, на этот раз причина появления новинки вполне предсказуема.</p>
-				</article>
-				<article>
-					<figure>
-						<img src="images/hp-descjet1663.jpg" alt="HP Descjet 1663">
-					</figure>
-					<h4><a href="javascript:void(0);">Обзор принтера Hewllett Packard Deskjet D1663</a></h4>
-					<p>Волны удовольствия...! Ну какой украинец не любит вкусной еды? Вот и я, признаться, не прочь поесть что-нибудь аппетитное.</p>					
-				</article>
-				<article>
-					<figure>
-						<img src="images/lifebook-x2.jpg" alt="Laptop Lifebook X2">
-					</figure>
-					<h4><a href="javascript:void(0);">LIFEBOOK X2: ноутбук, складывающийся вчетверо</a></h4>
-					<p>Настольный компьютер, ноутбук, нетбук, планшет, смартфон - вроде бы все размерные ниши компьютерных устройств уже заняты, и ничего тут не придумаеш.</p>					
-				</article>
-				<article>
-					<figure>
-						<img src="images/seagate-satellite.jpg" alt="HDD Segate GoFlex Satellite">
-					</figure>
-					<h4><a href="javascript:void(0);">Обзор беспроводного HDD Segate GoFlex Satellite</a></h4>
-					<p>Банальный вопрос: что делать, если в вашем ноутбуке закончилось место на жестком диске? Самый простой ответ - купить внешний жесткий диск с USB-интерфейсом, благо сейчас это недорого и широко доступно.</p>							
-				</article>
-			</div>
-		</section>
-    </main>	  
-    <footer>
-		<p>&#9400; 2003-2017, The LiveLinkShop</p>
-		<nav class="clearfix">
-			
-		</nav>	
-		<section>
-			<div class="feedback">
-				<div>
-					<address>Украина, Киев, ул. С.Мазепы, 31</address>
-					<p>(044) <strong>555-00-00</strong></p>
-					<a href="javascript:void(0);">Обратный звонок</a>
-				</div>
-				<div>
-					<div class="button-skew">
-						<a href="javascript:void(0);">Форма обратной связи</a>
-					</div>
-					<p><a href="javascript:void(0);">Условия использования сайта</a></p>
-				</div>
-			</div>
-			<div class="worktime">
-				<ul>
-					<li><strong>Время работы с 9:00 до 19:00</strong></li>
-					<li>Суббота с 9:00 до 18:00</li>
-					<li>Воскресенье с 10:00 до 15:00</li>
-				</ul>
-				<div>
-					<p>Принимаем к оплате</p>
-				</div>
-			</div>
-			<div class="social">
-				<ul class="clearfix">
-					<li><a href="javascript:void(0);">Мы на Фейсбуке</a></li>
-					<li><a href="javascript:void(0);">Наша страница вКонтакте</a></li>
-					<li><a href="javascript:void(0);">Наш Твиттер</a></li>
-				</ul>
-			</div>
-		</section>
-		<aside>
-			<figure>
-				<img src="images/owox-logo.png" alt="OWOX Logo">
-			</figure>
-			
-			<p>Интернет-магазин разработан и поддерживается <a href="javascript:void(0);">в компании OWOX</a> <br><data>2011</data></p>						
-		</aside>
+		<section class='sales'>			
 		
-    </footer>
-	<script src="script/main.js"></script>
+			<ul class='sales-nav clearfix'>
+				<li class='sales-nav-item js-sales-nav-item is-active'>
+					<a class='sales-nav-item-link' href='javascript:void(0);'>
+						<span>Спецпредложения</span>
+					</a>
+					
+					<div class='openBtn js-sales-openBtn'>
+						<a class='openBtn-link' href='javascript:void(0);' > menu open button</a>
+					</div>	
+				</li>	
+				</li>
+				<li class='sales-nav-item js-sales-nav-item'>
+					<a class='sales-nav-item-link' href='javascript:void(0);'>
+						<span>Бестселлеры</span>
+					</a>
+					
+					<div class='openBtn js-sales-openBtn'>
+						<a class='openBtn-link' href='javascript:void(0);' > menu open button</a>
+					</div>	
+				</li>
+				<li class='sales-nav-item js-sales-nav-item'>
+					<a class='sales-nav-item-link' href='javascript:void(0);'>
+						<span>Новинки</span>
+					</a>
+					
+					<div class='openBtn js-sales-openBtn'>
+						<a class='openBtn-link' href='javascript:void(0);' > menu open button</a>
+					</div>	
+				</li>
+				<li class='sales-nav-item js-sales-nav-item'>
+					<a class='sales-nav-item-link' href='javascript:void(0);'>
+						<span>Скоро в продаже</span>
+					</a>
+					
+					<div class='openBtn js-sales-openBtn'>
+						<a class='openBtn-link' href='javascript:void(0);' > menu open button</a>
+					</div>	
+				</li>		  
+			</ul>
+		
+			<ul class='sales-panels clearfix'>
+				<li class='sales-panel js-sales-panel is-active'>
+					<h2>Спецпредложения</h2>
+				</li>
+				<li class='sales-panel js-sales-panel'>
+					<h2>Бестселлеры</h2> 
+				</li>	
+				<li class='sales-panel js-sales-panel'>
+					<h2>Новинки</h2> 
+				</li>
+				<li class='sales-panel js-sales-panel'>
+					<h2>Скоро в продаже</h2> 
+				</li>				
+			</ul>	
+			
+			<ul class='sales-mobnav js-sales-mobnav'>
+				<li class='sales-mobnav-item js-sales-mobnav-item'><a>Спецпредложение</a></li>
+				<li class='sales-mobnav-item js-sales-mobnav-item'><a>Бестселлеры</a></li>
+				<li class='sales-mobnav-item js-sales-mobnav-item'><a>Новинки</a></li>
+				<li class='sales-mobnav-item js-sales-mobnav-item'><a>Скоро в продаже</a></li>
+			<ul>		
+		</section>
+		
+		
+		
+	</main>
+  
+  
+  
+  
+  
+  
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+		crossorigin="anonymous">
+	</script>
+	<script src='script/jquery/jqueryApp.js'></script>
+	<script src='script/main.js></script>
   </body>
 </html>
