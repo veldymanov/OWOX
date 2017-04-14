@@ -87,7 +87,7 @@ jQuery(document).ready(function(){
 //	Sales Special Offer Click
 //-------------------------------------------	
 
-	$('.js-next').on('click', function(){ 
+	$('.js-next').on('click', function(event){ 
 		event.preventDefault();
 		
 		var arrayIndex;
@@ -109,7 +109,7 @@ jQuery(document).ready(function(){
 		$('.js-offer-item').eq(arrayIndex).addClass('absolute');
 	});
 	
-	$('.js-prev').on('click', function(){ 
+	$('.js-prev').on('click', function(event){ 
 		event.preventDefault();
 		
 		var arrayIndex = $('.js-offer-item').length - 1;
