@@ -13,17 +13,19 @@
 
 html {
 	background: #e6f2ff;
+	height: 100%;
 }
 
 body {
-	font-family: 'Lato', sans-serif;
+	background-color: white;
+	font-family: Arial, sans-serif;
 	font-size: 16px;
+	height: 2030px;
 	max-width: 1200px;
 	min-width: 400px;
 	margin: 0 auto;
-	padding: 10px 1.5% 0 1.5%;
-	background-color: white;
-	/*position: relative;*/
+	overflow-x: hidden;
+	padding: 10px 1.5%;
 }
 
 header, main, footer{
@@ -61,6 +63,15 @@ a:focus {
 	text-decoration: none;
 }
 
+figure {
+	margin: 0;
+	padding: 0;
+}
+
+submit, button {
+	-webkit-appearance: none;/*Remove Safari mobile rounded coners*/
+}
+
 /*------------------------------------------
 *	Clearfix
 -------------------------------------------*/
@@ -81,7 +92,7 @@ a:focus {
 -------------------------------------------*/
 
 .button-skew {
-	background: linear-gradient(to bottom, #fff 20%, rgb(248, 248, 248), #fff 85%);
+	background: #fff;
 	border: solid 1px #ccc;
 	border-radius: 5px 1px;	
 	font-size: 15px;
@@ -104,8 +115,7 @@ a:focus {
 }
 
 .button-skew-link::after {
-	background:	linear-gradient(to bottom, rgba(250, 250, 250, 0.3), rgba(250, 250, 250, 0.3)), 
-				url(../images/arrow-icon.jpg) no-repeat bottom; 
+	background:	url(../images/arrow-icon.jpg) no-repeat bottom; 
 	background-size: 20px;	
 	content:" ";
 	display: inline-block;
@@ -124,7 +134,7 @@ a:focus {
 
 .head{
 	background: linear-gradient(to bottom, #fff 10%, rgba(240, 240, 245, 1), #fff) no-repeat;	
-	left: -1.75%;
+	left: -1.7%;
 	padding: 0 1.75% 20px 1.75%;
 	position: relative;
 	width: 103.5%;
@@ -149,6 +159,7 @@ a:focus {
 	height: 90px;
 	width: 180px;	
 }
+
 .logo-link{
 	display: block;
 	width: 100%;
@@ -198,7 +209,6 @@ a:focus {
     border: 1px solid #d9d9d9;
     border-radius: 4px 2px;
 	box-shadow: inset 1px 1px 1px #ebebeb;
-	/display: block;
 	font-size: inherit;
 	padding: 2px 54px 2px 6px;
 	-ms-transform: skewX(-17deg); /* IE 9 */
@@ -216,7 +226,6 @@ a:focus {
 }
 
 .search-form-submit {
-	-webkit-appearance: none;/*Remove Safari mobile rounded coners*/
 	background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 20%, rgba(205, 205, 205, 0.2), rgba(255, 255, 255, 0.2) 90%) no-repeat, url(../images/enter-arrow.jpg) center no-repeat;
 	/*background-position: 10px bottom, 0 0;*/
 	background-size: contain, 20px 10px;	
@@ -330,7 +339,7 @@ a:focus {
 	z-index: 1;	
 }
 
-.buscket-link{
+.buscket-link {
 	font-size: 1.5em;
 	font-style: italic;
 	font-weight: 900;
@@ -342,7 +351,7 @@ a:focus {
 	width: 100%;	
 }
 
-.buscket-link::before{
+.buscket-link::before {
 	background: url(../images/shopping-cart-1_318-10653.jpg) no-repeat; 
     background-size: contain;	
     content: " ";  
@@ -356,7 +365,7 @@ a:focus {
     width: 1.5em;	
 }
 
-.buscket-link::after{
+.buscket-link::after {
     content: " ";  
 	display: block;
 	float: right;
@@ -374,7 +383,7 @@ a:focus {
 	height: 0;
 }
 
-.buscket:hover, .buscket:focus{
+.buscket:hover, .buscket:focus {
 	border-color: #aaa;
 	box-shadow: none;
 }
@@ -387,24 +396,27 @@ a:focus {
 *	Head Navigation
 -------------------------------------------*/
 
-.navigation{
+.head-navigation {
 	margin: 0;
 	padding: 0;
 }
 
+.head-navigation .menu {
+	font-size: 0.8125em;
+}
+
 /*------------------------------------------
-*	Menu (header)
+*	Menu
 -------------------------------------------*/
 
 .menu-item {
 	float: left;
 	margin: 0;
-	padding: 5px;
+	padding: 5px 0.5%;
 }
 
 .menu-item-link {	
 	display: block; 
-	font-size: 13px;
 	height: 100%;
 	text-align: left;
 	width: 100%; 	
@@ -416,10 +428,10 @@ a:focus {
     content: " "; 
 	display: block;
 	float: left;
-	height: 18px;
+	height: 1.384615em;
 	position: relative;
 	top: -0.1em;
-    width: 18px; 
+    width: 1.384615em; 
 }  
 
 /*------------------------------------------
@@ -857,33 +869,713 @@ a:focus {
 -------------------------------------------*/
 
 .sales-panels {
-  position: relative;
-  height: 250px;
+	position: relative;
+	height: 340px;
 }
 
 .sales-panel {
-  position: absolute;
-  top: 0;
-  left: 0;
-  border: 1px solid #689cbe;
-  border-radius: 0 5px 5px 5px;
-  width: 100%;
-  height: 100%;
-  padding: 10px;
-  background-color: white;
+	background-color: white;
+	border: 1px solid #689cbe;
+	border-radius: 5px;
+	height: 100%;
+	left: 0;
+	padding-top: 5px;
+	position: absolute;
+	top: 0;
+	width: 100%;
 }
 
 .sales-panel.is-active {
-  z-index: 1;
+	z-index: 1;
+}
+
+.sales-panel:first-child.is-active {
+	border-top-left-radius: 0;
+}
+
+.sales-panel .button-skew {
+	position: absolute;
+	right: 5%;
+	
+}
+
+/*------------------------------------------
+*	Special Offer Panel 
+-------------------------------------------*/
+
+.special-offer .button-skew  {
+	width: 220px;
+}
+
+/*------------------------------------------
+*	Prev, Next buttons
+-------------------------------------------*/
+
+.prev, .next {
+	background: transparent;
+	cursor: pointer;
+	font-size: 50px;
+	opacity: 0.3;
+	position: absolute;
+	text-decoration: none;
+	top: 30%;
+}
+
+.prev:hover, .next:hover,
+.prev:active, .next:active, 
+.prev:focus, .next:focus {
+  color: #105a8f
+}
+
+.prev.is-active, .next.is-active {
+	opacity: 1;
+}
+
+.prev {
+	left: 5px;
+}
+
+.next {
+	right: 5px;
+}
+
+/*------------------------------------------
+*	Offer
+-------------------------------------------*/
+
+.special-offer-content {
+	height: 100%;
+	overflow: hidden;
+	padding-left: 41px;
+	padding-right: 41px;
+	width: 100%;
+}
+
+.offer {
+	height: 100%;
+	overflow: hidden;
+	margin-top: 40px;
+	width: 100%;
+}
+
+.offer-item {
+	/*animation: fade 1s;*/
+	float: left;
+	height: 293px;
+	left: 0;
+	padding: 10px 15px;
+	position: relative;
+	width: 215px;
+}
+
+.offer-item.absolute {
+	left: -550px;
+	position: absolute;
+}
+
+.attention {
+	background: #d10000;
+	border-radius: 50%;
+	font-style: italic;
+	font-size: 12px;
+	font-weight: 700;
+	color: #fff;
+	height: 32px;
+	left: 0px;
+	line-height: 30px;
+	padding: 1px 4px;
+	position: absolute;
+	top: 4px;
+	transform: rotate(-15deg);
+	z-index: 1;
+}
+
+.offer-img {
+	padding-bottom: 10px;
+	position: relative;
+	height: 160px;
+}
+
+.offer-img img {
+	left: 50%;
+	position: relative;
+	transform: translateX(-50%);
+	width: 160px;
+}
+
+.offer-img figcaption {
+	bottom: 10px;
+	color: #d10000;
+	font-size: 12px;
+	position: absolute;
+}
+
+/*-------------------
+*	Tooltip container 
+---------------------*/
+
+.tooltip-container {
+    /*position: relative;*/
+    /*display: block;*/
+}
+
+.tooltip {
+	background: url(../images/computer_bag.jpg) no-repeat,
+				url(../images/mouse_wireless.jpg) no-repeat, 
+				#fff; 
+	background-position: center 5px, center 60px, 0 0;
+	background-size: 50px, 60px, contain;	
+	border: 1px solid #e46d6d;
+	border-radius: 6px;
+    color: #000;
+	height: 100px;
+	position: absolute;
+	right: -5px;
+	text-indent: -9999px;
+	top: -5px;
+    width: 60px;
+	z-index: 1;  
+}
+
+.tooltip::before { 
+	border-color: transparent #e46d6d transparent transparent;
+	border-style: solid;
+	border-width: 6px 10px;
+	content: "";
+	left: -20px;
+    position: absolute; 
+    top: 20px;
+} 
+
+.tooltip::after { 
+	border-color: transparent #fff transparent transparent;
+	border-style: solid;
+	border-width: 5px 9px;
+	content: "";
+	left: -18px;
+    position: absolute; 
+    top: 21px;
+} 
+
+.offer-link {
+	display: block;
+	font-size: 13px;
+	font-weight: bold;
+	padding: 5px 0;
+}
+
+.previuos-price {
+	color: #999;
+	font-size: 13px;
+	font-weight: 700;
+	padding: 5px 0;	
+	text-decoration: line-through;
+}
+
+.to-buscket {
+	background: linear-gradient(to bottom, #fff 20%, #f2f3f3, #fff);
+	border-radius: 6px 2px;
+	border-width: 1px;
+	font-weight: 700;
+	left: -8px;
+	padding-left: 10px;
+	padding-right: 35px;
+	position: relative;
+	text-align: left;
+	transform: skewX(-15deg);
+}
+
+.to-buscket span {
+	font-size: 18px;
+}
+
+.to-buscket::after{
+	background: url(../images/shopping-cart-1_318-10653.jpg) no-repeat; 
+    background-size: contain;	
+    content: " ";  
+    display: block;
+	height: 16px;
+	right: 8px;
+	position: absolute;
+	top: 15%;
+    width: 18px;	
+}
+
+.to-buscket:hover, .to-buscket:focus{
+	border-color: #aaa;
+	cursor: pointer;
+	box-shadow: none;
 }
 
 
+.dollar-price{
+	color: #999999;
+	font-size: 11px;
+}
+
+
+/*------------------------------------------
+*	Bestsellers Panel 
+-------------------------------------------*/
+
+.bestsellers .button-skew {
+	width: 170px;
+}
+
+/*------------------------------------------
+*	New-Product Panel 
+-------------------------------------------*/
+
+.new-product .button-skew {
+	width: 135px;
+}
+
+/*------------------------------------------
+*	Soon Panel 
+-------------------------------------------*/
+
+.soon .button-skew {
+	width: 170px;
+}
+
+/*------------------------------------------
+*	Brands
+-------------------------------------------*/
+
+.brands{
+	border-bottom: 1px solid #ccc;
+	margin: 40px 0;
+	padding: 0 0 40px 0;
+}
+
+.brands .button-skew {
+	float: right;
+	margin-right: 5%;
+	width: 185px;
+}
+
+.brands>h5{
+	margin-top: 0;
+}
+
+/*------------------------------------------
+*	Brands-Block
+-------------------------------------------*/
+
+.brands-block { 
+	margin: 0 0 40px 0;
+	padding: 0;
+	position: relative;
+}
+
+.brands-subblock {
+	float: left;
+	width: 50%;
+}
+
+.brands-button-block { 
+	margin: 0;
+	float: left;
+	width: 50%;
+	height: 128px;
+}
+
+.brands-button {
+	border: 0; /*For Safari*/
+	border-image: linear-gradient(to bottom, #fff, #ccc) 1 100%; 
+	border-right: 1px solid #ccc;
+	float: left;
+	height: 64px;
+	padding: 0;
+	width: 50%;
+}
+
+.brands-button:nth-child(3), 
+.brands-button:nth-child(4){
+	border-image: linear-gradient(to top, #fff, #ccc) 1 100%; 
+}
+
+.brands-subblock:last-child .brands-button-block:last-child .brands-button:nth-child(2n){
+	border-right: 0;
+}
+
+.brands-button-link{
+	display: block;
+	height: 100%;
+	line-height: 64px;
+	margin: 0;
+	padding: 0;
+	text-indent: -9999px;
+	width: 100%;
+}
+
+.brands-button-link:hover, .brands-button-link:focus{
+	border: 1px solid #ccc;
+}
+
+.brands-button:nth-child(1) a,.brands-button:nth-child(2) a{
+	border-bottom: 1px solid #ccc;
+}
+
+.brands-subblock:first-child .brands-button-block:nth-child(1) .brands-button:nth-child(1) a{
+	background: url(../images/att_logo.png) center no-repeat;
+	background-size: 6em;
+}
+
+.brands-subblock:first-child .brands-button-block:nth-child(1) .brands-button:nth-child(2) a{
+	background: url(../images/toshiba-logo.png) center no-repeat;
+	background-size: 7em;
+}
+
+.brands-subblock:first-child .brands-button-block:nth-child(1) .brands-button:nth-child(3) a{
+	background: url(../images/ibm-logo.png) center no-repeat;
+	background-size: 4em;
+}
+
+.brands-subblock:first-child .brands-button-block:nth-child(1) .brands-button:nth-child(4) a{
+	background: url(../images/dell-logo.png) center no-repeat;
+	background-size: 5em;
+}
+
+.brands-subblock:first-child .brands-button-block:nth-child(2) .brands-button:nth-child(1) a{
+	background: url(../images/apple-logo.png) center no-repeat;
+	background-size: 2.3em;
+}
+
+.brands-subblock:first-child .brands-button-block:nth-child(2) .brands-button:nth-child(2) a{
+	background: url(../images/microsoft-logo.png) center no-repeat;
+	background-size: 6em;
+}
+
+.brands-subblock:first-child .brands-button-block:nth-child(2) .brands-button:nth-child(3) a{
+	background: url(../images/intel-logo.png) center no-repeat;
+	background-size: 4em;
+}
+
+.brands-subblock:first-child .brands-button-block:nth-child(2) .brands-button:nth-child(4) a{
+	background: url(../images/amd_logo.png) center no-repeat;
+	background-size: 6em;
+}
+
+.brands-subblock:last-child .brands-button-block:nth-child(1) .brands-button:nth-child(1) a{
+	background: url(../images/cisco_logo.png) center no-repeat;
+	background-size: 4em;
+}
+
+.brands-subblock:last-child .brands-button-block:nth-child(1) .brands-button:nth-child(2) a{
+	background: url(../images/panasonic-logo.png) center no-repeat;
+	background-size: 6em;
+}
+
+.brands-subblock:last-child .brands-button-block:nth-child(1) .brands-button:nth-child(3) a{
+	background: url(../images/lenovo-logo.png) center no-repeat;
+	background-size: 6em;
+}
+
+.brands-subblock:last-child .brands-button-block:nth-child(1) .brands-button:nth-child(4) a{
+	background: url(../images/asus-logo.png) center no-repeat;
+	background-size: 5em;
+}
+
+.brands-subblock:last-child .brands-button-block:nth-child(2) .brands-button:nth-child(1) a{
+	background: url(../images/nokia-logo.png) center no-repeat;
+	background-size: 5em;
+}
+
+.brands-subblock:last-child .brands-button-block:nth-child(2) .brands-button:nth-child(2) a{
+	background: url(../images/sumsung-logo.png) center no-repeat;
+	background-size: 7em;
+}
+
+.brands-subblock:last-child .brands-button-block:nth-child(2) .brands-button:nth-child(3) a{
+	background: url(../images/nec-logo.png) center no-repeat;
+	background-size: 4em;
+}
+
+.brands-subblock:last-child .brands-button-block:nth-child(2) .brands-button:nth-child(4) a{
+	background: url(../images/kaspersky-logo.jpg) center no-repeat;
+	background-size: 6.5em;
+}
+
+/*------------------------------------------
+*	Brandnames-Block
+-------------------------------------------*/
+
+.brandnames-block { 
+	margin: 0;
+	padding: 0;
+}
+
+.brandnames-subblock{ 
+	margin: 0;
+	padding: 0;
+	float: left;
+	width: 25%;
+}
+
+.brandnames {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	font-size: 0.75em;
+	width: 50%;
+	float: left;
+}
+.brandnames-item {
+	padding: 3px 0;
+}
+.brandnames-item a:hover, .brandnames-item a:focus{
+	color: red;
+}
+
+/*------------------------------------------
+*	Articles
+-------------------------------------------*/
+
+.articles {
+	background: linear-gradient(to bottom, #fff 93%, rgba(198, 198, 236, 1));
+	border: 0;
+	border-bottom: 3px solid #333399;
+	margin: 40px 0;
+	padding: 0 0 40px 0;
+}
+
+.articles .button-skew {
+	float: right;
+	width: 220px;
+}
+
+.articles-block { 
+	font-size: 0.8em;
+	margin-top: 20px;
+	padding: 0;
+}
+
+.articles-block > article{ 
+	float: left;
+	margin: 0;
+	padding: 0 1em 0 0;
+	width: 25%;	
+}
+
+.articles-block  > article figure{
+	height: 150px;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+	text-align: center;
+	width: 100%;	
+}
+
+.articles-block  > article figure img{
+	max-height: 130px;
+	max-width: 80%;
+}
+
+.articles-block  > article h4{
+	margin: 0;
+}
+
+/*------------------------------------------
+*	Footer
+-------------------------------------------*/
+
+footer{
+	font-size: 0.8em;
+}
+
+/*------------------------------------------
+*	Foot-Navigation
+-------------------------------------------*/
+
+.foot-navigation .menu {
+	font-size: 0.9em;
+}
+
+/*------------------------------------------
+*	Foot-Container
+-------------------------------------------*/
+
+.foot-container {
+	border: 0;
+	border-image: linear-gradient(to bottom, #fff, #ccc, #fff) 1 100%;
+	border-right: 1px solid;
+	float: left;
+	margin: 0 0 40px 0;
+	padding: 0;
+	width: 75%;
+}
+
+.feedback, .worktime, .social{ 
+	float: left;
+	margin: 0;
+	padding: 10px 20px 20px 0;
+	width: 33.33%;
+}
+
+.feedback>div:nth-child(1){ 
+	padding: 0 0 20px 0;
+}
+
+.feedback div:nth-child(1) p {
+	font-size: 1.5em;
+	padding: 0;
+	margin: 0;
+}
+
+.feedback div:nth-child(1) a {
+	text-decoration: none;
+	font-weight: bold;
+	border-bottom: 1px dotted;
+}
+
+.feedback div:nth-child(1) a:hover, .feedback div:nth-child(1) a:focus {
+	border:0;
+}
+
+.feedback .button-skew {
+	width: 200px;
+}
+
+.feedback .button-skew-link {
+	border-bottom: 1px dotted;
+	font-size: 1em;
+	margin: 3px 12px;
+	padding: 0;
+	text-decoration: none;
+	width: auto;
+}
+
+.feedback .button-skew-link::after {
+	display: none;
+}
+
+.feedback .button-skew-link:hover, .feedback .button-skew-link:focus {
+	border: 0;
+}
+
+.feedback > div p {
+	padding: 40px 0 0 0;
+}
+
+.feedback > div p > a {
+	color: black;
+}
+
+.worktime ul { 
+	margin: 0;
+	padding: 0 0 10px 0;
+}
+
+.worktime ul li {
+	padding: 0 0 8px 0;
+}
+
+.worktime > div {
+	width: 220px;
+	height: 70px;
+	overflow: hidden;
+	background: url(../images/visa-master-logo.png) no-repeat,
+				url(../images/webmoney-logo.png) no-repeat;
+	background-position: left bottom, 105px bottom;
+	background-size: 100px, 100px;		
+}
+
+.worktime > div p {
+	margin-top: 0;
+}
+
+.social ul li{
+	margin: 0;
+	padding: 0 0 20px 0;	
+}
+.social ul li::before {
+	content: " "; 
+	display: block;
+	float: left;
+	height: 25px;
+	padding-right: 10px;
+	position: relative;  
+	top: -3px;
+    width: 25px; 	
+}
+
+.social ul li:nth-child(1)::before{
+	background: url(../images/facebook-logo.jpg) no-repeat; 
+	background-size: contain;	 	
+}
+
+.social ul li:nth-child(2)::before{
+	background: url(../images/vkontakte-logo.png) no-repeat; 
+	background-size: contain;	 	
+}
+
+.social ul li:nth-child(3)::before{
+	background: url(../images/twitter-logo.jpg) no-repeat; 
+	background-size: contain;	 	
+}
+
+.social ul li a:hover, .social ul li a:focus{
+	text-decoration: none;
+}
+
+/*------------------------------------------
+*	Footer Aside
+-------------------------------------------*/
+
+footer > aside {
+	float: left;
+	font-size: 0.9em;
+	margin: 0 auto;
+	padding: 0 0 0 10px;
+	width: 25%;
+}
+
+footer > aside figure {
+	margin: 0 15px 10px 0;
+	padding: 0;
+}
+
+footer > aside figure img {
+	width: 140px;
+}
+
+footer>aside p {
+	margin: 0;
+	padding: 0;
+}
+
+footer>aside p data {
+	color: #777;
+}
+
+/*------------------------------------------
+*	@keyframes
+-------------------------------------------
+
+@-webkit-keyframes fade {
+  from {opacity: .4; visibility: hidden;} 
+  to {opacity: 1; visibility: visible;}
+}
+
+@keyframes fade {
+  from {opacity: .4; visibility: hidden;} 
+  to {opacity: 1; visibility: visible;}
+}
+
+*/
+
+/*------------------------------------------
+*	@media
+-------------------------------------------*/
 
 @media only screen and (min-width: 1000px) { /*Set parameters after JS*/
 	.dropnav {	
 		display: block !important;
 	}	
 }
+
+
 
 @media only screen and (max-width: 1199px){
 	
@@ -903,6 +1595,8 @@ a:focus {
 		width: calc(100% - 590px);
 	}		
 }
+
+
 
 @media only screen and (max-width: 999px){
 
@@ -1012,7 +1706,6 @@ a:focus {
 	
 	.dropnav-item-content{ 
 		position: relative;
-		.background: #006cb3;
 	}
 	
 	/*-------------------------------
@@ -1046,18 +1739,109 @@ a:focus {
 	}			
 
 	/*--------------------------------
-	*	Sales
+	*	Sales Navigation
 	---------------------------------*/
 	
-	.sales-nav-item{
+	.sales-nav-item {
 		display: none;
 	}
 	
 	.sales-nav-item.is-active {
 		display: block;
 	}
+
+	/*--------------------------------
+	*	Sales Panels
+	---------------------------------*/
+	
+	.sales-panel {
+		border-radius: 0 5px 5px 5px;
+	}
+
+	/*--------------------------------
+	*	Brands-Block
+	---------------------------------*/	
+	
+	.brands-subblock{/*nav.brands*/
+		float: none;	
+		width: 100%;
+	}
+	
+	.brands-subblock:first-child .brands-button-block:nth-child(2) .brands-button:nth-child(2), 
+	.brands-subblock:first-child .brands-button-block:nth-child(2) .brands-button:nth-child(4){
+		border-right: 0;
+	}	
+
+	/*--------------------------------
+	*	Brandnames-Block
+	---------------------------------*/	
+	
+	.brandnames {
+		width: 100%;
+	}
+	
+	/*--------------------------------
+	*	Articles
+	---------------------------------*/	
+
+	.articles-block article{ /*section.articles article.articles-block article*/
+		width: 100%;
+	}	
+	.articles-block  > article figure{
+		float: left;
+		width: 25%;
+		min-width: 200px;
+	}	
+	
+	/*--------------------------------
+	*	Foot-Container
+	---------------------------------*/	
+
+	.foot-container {
+		border: 0;
+		border-bottom: 1px solid #ccc;
+	}
+	
+	.foot-container, footer > aside, .feedback, .worktime, .social {
+		width: 100%;
+	}
+	
+	.feedback div:nth-child(1) { 
+		float: left;
+	}
+	
+	.feedback div:nth-child(2) {
+		float: right;
+		width: 220px;
+	}
+	
+	.worktime ul { 
+		float: left;
+	}
+	
+	.worktime > div{
+		float: right;
+	}
+	
+	.social ul li{ 
+		float: left;
+		padding-right: 5%;
+	}
+	
+	.social ul li:last-child{
+		padding-right: 0;
+	}
+	
+	/*--------------------------------
+	*	Footer-Aside
+	---------------------------------*/	
+	
+	footer > aside figure{
+		float: left;
+	}	
 	
 }
+
 
 @media only screen and (max-width: 800px){
 	/*--------------------------------
@@ -1067,6 +1851,8 @@ a:focus {
 		width: 590px;
 	}	
 }
+
+
 
 @media only screen and (max-width: 599px){ 	
 
@@ -1109,6 +1895,5 @@ a:focus {
 		width: 100%;
 	}	
 	
-	
-	
+		
 }	

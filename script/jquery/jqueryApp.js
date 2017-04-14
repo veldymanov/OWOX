@@ -1,3 +1,4 @@
+
 jQuery(document).ready(function(){
 
 //------------------------------------------
@@ -81,5 +82,62 @@ jQuery(document).ready(function(){
 	
 	$('.js-sales-nav-item').on('click', salesIsActive);
 	$('.js-sales-mobnav-item').on('click', salesIsActive);
+	
+//------------------------------------------
+//	Sales Special Offer Click
+//-------------------------------------------	
+
+	$('.js-next').on('click', function(){ 
+		event.preventDefault();
+		
+		var arrayIndex;
+		
+		for(var i = 0, l = $('.js-offer-item').length - 1; i < l; i++){
+			if ( !($('.js-offer-item').eq(i).hasClass('absolute')) ){
+				arrayIndex = i;
+				
+				if (arrayIndex === 0) {
+					$('.prev').addClass('is-active');
+				} else if ( arrayIndex === l - 1) {
+					$(this).removeClass('is-active');
+				}
+				
+				break;
+			}
+		}
+		
+		$('.js-offer-item').eq(arrayIndex).addClass('absolute');
+	});
+	
+	$('.js-prev').on('click', function(){ 
+		event.preventDefault();
+		
+		var arrayIndex = $('.js-offer-item').length - 1;
+		
+		for(var i = 0, l = $('.js-offer-item').length; i < l; i++){
+			if ( !($('.js-offer-item').eq(i).hasClass('absolute')) ){
+				arrayIndex = i - 1; 
+				
+				if (arrayIndex === 0) {
+					$(this).removeClass('is-active');
+					
+				} else if ( arrayIndex === l - 2) {
+					$('.next').addClass('is-active');
+				}
+				
+				break;
+			}
+		}
+		
+		$('.js-offer-item').eq(arrayIndex).removeClass('absolute');
+		//$('.js-offer-item').animate({'opacity': '0.5'}, 'fast')
+	});
+
+//------------------------------------------
+//	Sales  Offer Touch
+//-------------------------------------------		
+
+
+
 	
 });
