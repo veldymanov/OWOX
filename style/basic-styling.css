@@ -20,8 +20,8 @@ body {
 	background-color: white;
 	font-family: Arial, sans-serif;
 	font-size: 16px;
-	height: 2030px;
 	max-width: 1200px;
+	min-height: 2030px;
 	min-width: 400px;
 	margin: 0 auto;
 	overflow-x: hidden;
@@ -1600,6 +1600,10 @@ footer>aside p data {
 
 @media only screen and (max-width: 999px){
 
+	body{
+		min-height: 3000px;
+	}
+
 	/*-------------------------------
 	*	Logo
 	---------------------------------*/	
@@ -1856,6 +1860,10 @@ footer>aside p data {
 
 @media only screen and (max-width: 599px){ 	
 
+	body{
+		min-height: 3100px;
+	}
+
 	/*-------------------------------
 	*	Logo
 	---------------------------------*/	
@@ -1897,3 +1905,11 @@ footer>aside p data {
 	
 		
 }	
+
+@media only screen and (max-width: 499px){ 	
+
+	body{
+		min-height: 3350px;
+	}
+	
+}
