@@ -80,11 +80,9 @@ submit, button {
   content: "";
   display: table;
 }
+
 .clearfix::after{
 	clear: both;
-}
-.clearfix{
-	zoom: 1; /*IE6&7*/
 }
 
 /*------------------------------------------
@@ -879,6 +877,8 @@ submit, button {
 	border-radius: 5px;
 	height: 100%;
 	left: 0;
+	padding-left: 41px;  /*For touch event*/
+	padding-right: 41px; /*For touch event*/
 	padding-top: 5px;
 	position: absolute;
 	top: 0;
@@ -931,11 +931,11 @@ submit, button {
 	opacity: 1;
 }
 
-.prev {
+.next {
 	left: 5px;
 }
 
-.next {
+.prev {
 	right: 5px;
 }
 
@@ -946,20 +946,21 @@ submit, button {
 .special-offer-content {
 	height: 100%;
 	overflow: hidden;
-	padding-left: 41px;
-	padding-right: 41px;
 	width: 100%;
+}
+
+.special-offer-content.sliding {
+    border: thin solid orange;
 }
 
 .offer {
 	height: 100%;
-	overflow: hidden;
+	/*overflow: hidden;*/
 	margin-top: 40px;
-	width: 100%;
+	/*width: 100%;*/
 }
 
 .offer-item {
-	/*animation: fade 1s;*/
 	float: left;
 	height: 293px;
 	left: 0;
