@@ -832,7 +832,7 @@ submit, button {
     right: 5%; }
   @media (max-width: 999px) {
     .sales-panel {
-      border-radius: 0 5px 5px 5px; } }
+      border-radius: 0 5px 5px 5px !important; } }
   .sales-panel.is-active {
     z-index: 1; }
   .sales-panel:first-child.is-active {

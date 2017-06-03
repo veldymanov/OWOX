@@ -117,13 +117,13 @@
 		right: 5%;	
 	}
 	@include respond-to(max-width, 999px){
-		border-radius: 0 5px 5px 5px;
+		border-radius: 0 5px 5px 5px !important; //To override JS manipulation
 	}
 	&.is-active {
 		z-index: 1;
 	}
 	&:first-child.is-active {
-		border-top-left-radius: 0 !important; 
+		border-top-left-radius: 0 !important; //To override JS manipulation
 	}
 }
 

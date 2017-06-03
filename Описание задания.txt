@@ -23,4 +23,4 @@ In folder C:\Users\User\Documents\GitHub\owox_sass\style
 
 /*Sass --watch*/
 In folder C:\Users\User\Documents\GitHub\owox_sass\style
-	sass --watch style/scss:scss/..
+	sass --watch scss:scss/..

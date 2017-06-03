@@ -1,4 +1,3 @@
-
 jQuery(document).ready(function(){
 
 //------------------------------------------
@@ -49,7 +48,6 @@ jQuery(document).ready(function(){
 //------------------------------------------
 //	Sales
 //-------------------------------------------	
-
 	$('.js-sales-nav-item:first-child').on('mouseover', function(event){
 		event.preventDefault();
 		
