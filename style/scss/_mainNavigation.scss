@@ -1,0 +1,151 @@
+.main-navigation{ 
+	background: #0d5e92;
+	border-radius: 5px;
+	margin-bottom: 20px;
+	padding: 0 3px;
+	a{	
+		color: #fff;
+		display: inline-block;
+		height: 100%;
+		font-weight: bold;
+		padding: 10px 15px 10px 15px;	
+		text-align: left;
+		text-decoration: none;    	
+		width: 100%;
+	}	
+}
+
+/*------------------------------------------
+*	Drop Navigation
+-------------------------------------------*/
+.dropnav{ /*ul*/
+	position: relative;
+	background-color: inherit;
+	@include respond-to(max-width, 999px){
+		display: none;
+		font-size: 1em;
+		height:  100%;
+		overflow: auto;
+		padding-top: 40px;
+		position: fixed;
+		right: 5px;
+		top: 5px;
+		z-index: 3;	
+	}
+	@include respond-to(min-width, 1000px){ //Set parameters after JS
+		display: block !important;
+	}
+}
+
+.dropnav-item{ /*ul li*/
+	border-left: 1px solid #32729a;
+	float: left;	
+	position: relative;
+	width: 16.66%;		
+	&:hover .dropnav-item-link::after , &:focus .dropnav-item-link::after{
+		@include transform($tr: rotate(180deg));
+	}
+	&:last-child .dropnav-item-content{
+		right: 0;
+	}	
+	&:hover .dropnav-item-content, &:focus .dropnav-item-content{
+		display: block;
+	}
+	@include respond-to(max-width, 999px){
+		float: none;
+		width: 260px;	
+	}
+}
+
+.dropnav-item-link{ /*ul li a*/
+	position: relative;
+	&::after {
+		content: " ";  
+		position: absolute;
+		right: 1%;
+		top: 35%;
+		/*----------
+		*	Triangle
+		--------------*/		
+		border-left: 0.4em solid transparent;
+		border-right: 0.4em solid transparent;
+		border-top: 0.8em solid #5e93b5;	
+		height: 0;
+		width: 0;
+	}
+}
+
+.dropnav-item-content { 
+	background: #006cb3;
+	display: none;
+	position: absolute; //related .dropnav-item
+	width: 120%;
+	z-index: 2;
+	a:hover{
+		background: #001cb3;
+	}
+	@include respond-to(max-width, 999px){
+		position: relative;
+		width: 100%;
+	}
+}
+
+/*------------------------------------------
+*	mobnav (Mobile Navigation)
+-------------------------------------------*/
+.mobnav{
+	display: none;
+	.mobnav-item{
+		background: #fff;
+		margin: 8px;
+		float: left;	
+		width: 250px;
+	}
+	a{
+		color: blue;
+		padding: 3px 5px;
+	}	
+	@include respond-to(max-width, 999px){
+		display: block;
+	}
+}
+	
+.openBtn{
+	display: none;
+	float: right;
+	margin: 8px;	
+	@include respond-to(max-width, 999px){
+		display: block;
+	}
+}
+
+.openBtn-link{
+	@include margPad;
+	background: url(../images/icon_nav.png)  no-repeat center;
+	background-size: 36px 24px;
+	border-radius: 4px;
+	display: block;
+	height: 24px;
+	text-indent: $linkAccess;
+	width: 30px;
+}
+
+/*------------------------------------------
+*	Close button for mobile menu
+-------------------------------------------*/
+.closeBtn{ 
+	position: fixed;
+	right: 215px;
+	top: 5px;
+	width: 50px;
+	z-index: 4;
+	.closeBtn-link{
+		display: none;
+		padding: 0;
+		font-size: 1.5em;
+		text-align: center;
+		&:hover, &:focus {
+			background: #006cb3;
+		}
+	}
+}

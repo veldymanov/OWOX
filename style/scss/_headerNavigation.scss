@@ -1,0 +1,37 @@
+.head-navigation {
+	@include margPad;
+	.menu {
+		font-size: 0.8125em;
+	}
+	@include respond-to(max-width, 999px){
+		display: none;
+	}	
+}
+
+/*------------------------------------------
+*	Menu
+-------------------------------------------*/
+.menu-item{
+	float: left;
+	margin: 0;
+	padding: 5px 0.5%;
+}
+
+.menu-item-link{	
+	display: block; 
+	height: 100%;
+	text-align: left;
+	width: 100%; 	
+}
+
+.question::before{
+	background: url(../images/sign-question-icon_34359.png) no-repeat; 
+    background-size: contain;
+    content: " "; 
+	display: block;
+	float: left;
+	height: 1.384615em;
+	position: relative;
+	top: -0.1em;
+    width: 1.384615em; 
+}  

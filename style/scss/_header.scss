@@ -1,0 +1,294 @@
+.head{
+	background: linear-gradient(to bottom, #fff 10%, rgba(240, 240, 245, 1), #fff) no-repeat;	
+	left: -1.7%;
+	padding: 0 1.75% 20px 1.75%;
+	position: relative;
+	width: 103.5%;
+}
+
+/*------------------------------------------
+*	Head Top
+-------------------------------------------*/
+.head-top{
+	margin-bottom: 10px;
+}
+
+/*------------------------------------------
+*	Logo
+-------------------------------------------*/
+.logo{	
+	background: url(../images/livelink-shop-logo.png) no-repeat;
+	background-size: contain;
+	float: left;
+	height: 90px;
+	width: 180px;
+	@include respond-to(max-width, 999px){
+		height: 65px;
+		width: 130px;
+	}	
+	@include respond-to(max-width, 599px){
+		height: 75px;
+		width: 150px;
+	}	
+}
+
+.logo-link{
+	display: block;
+	width: 100%;
+	height: 100%;
+	text-indent: $linkAccess;
+}
+
+/*------------------------------------------
+*	Search
+-------------------------------------------*/
+.search{ 
+	float: left;
+	font-family: arial, sans-serif;
+	margin-left: 4%;
+}
+
+.search-info {
+	font-size: 1.4em;	
+	font-style: italic;
+	margin-bottom: 15px;
+	@include respond-to(max-width, 999px){
+		font-size: 1.1em;	
+		margin-bottom: 15px;
+	}	
+}
+
+.search-info-phone{
+	font-size: 1.4em;
+	font-weight: bold;
+	@include respond-to(max-width, 999px){
+		font-size: 1em;
+		font-weight: normal;
+	}	
+}
+
+.search-info-link{
+	border-bottom: dotted 1px;
+	font-size: 13px;
+	font-weight: bold;
+	margin-left: 5px;
+	text-decoration: none;
+	vertical-align: 1.5em;
+	&:hover{
+		border-bottom-width: 0;
+	}
+	@include respond-to(max-width, 999px){
+		margin-left: 10px;
+		font-size: 0.75em;
+		vertical-align: text-top;
+	}	
+	@include respond-to(max-width, 599px){
+		display: block;
+		margin-top: 5px;
+		width: 123px;
+	}	
+}
+
+.search-form{
+	position: relative;
+}
+
+.search-form-input {
+	@include transform($tr: skewX(-17deg));
+    border: 1px solid #d9d9d9;
+    border-radius: 4px 2px;
+	box-shadow: inset 1px 1px 1px #ebebeb;
+	font-size: inherit;
+	padding: 2px 54px 2px 6px;
+	width: 100%;
+	&::placeholder{
+		@include transform($tr: skewX(17deg));
+		color: #aaa;
+		font-style: italic;
+	}
+	@include respond-to(max-width, 599px){
+		width: 220px;
+	}	
+}
+
+.search-form-submit {
+	@include transform($tr: skewX(-17deg));
+	background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 20%, rgba(205, 205, 205, 0.2), rgba(255, 255, 255, 0.2) 90%) no-repeat, url(../images/enter-arrow.jpg) center no-repeat;
+	background-size: contain, 20px 10px;	
+	border: 1px solid #d9d9d9;
+    border-radius: 4px 2px;
+	cursor: pointer;
+	font-size: inherit;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	right: 2px;
+	top: 2px;
+	width: 48px;
+}
+
+/*------------------------------------------
+*	Online-Help
+-------------------------------------------*/
+.online-help{
+	background: url(../images/online-consultation.gif) center no-repeat;
+	background-position: -12px 0;
+	background-size: 118px;
+	border: 1px solid #5278a2;
+	float: left;
+	height: 90px;
+	margin-left: 7%;
+	opacity: 0.8;
+	width: 102px;	
+	@include respond-to(max-width, 999px){
+		display: none;
+	}	
+}
+
+.online-help-link{
+	display: block;
+	width: 100%;
+	height:100%;
+	text-indent: $linkAccess;
+}
+
+/*------------------------------------------
+*	Head Top Right
+-------------------------------------------*/
+.head-top-right{
+	float: right;
+	@include respond-to(max-width, 999px){
+	   font-size: 0.7em;
+	}
+	@include respond-to(max-width, 599px){
+	   margin-top: 10px;
+	}		
+}
+
+/*------------------------------------------
+*	Entrance
+-------------------------------------------*/
+.entrance-link{
+	border-bottom: dotted 1px;
+    font-size: 13px;
+	font-weight: bold;
+	text-decoration: none;
+	&::before{
+		content: " ";
+		background: url(../images/N8240EC9D00EA.jpg) no-repeat; 
+		background-size: contain; // %; em; px; auto; cover; contain;
+		float: left;
+		height: 20px;  
+		width: 20px; 
+	}
+	&:hover{
+		border-width:0;
+	}
+	& span:first-child{
+		@include respond-to(max-width, 999px){
+			display: none;
+		}	
+	}	
+	& span:last-child{
+		display:none;
+		@include respond-to(max-width, 999px){
+			display: inline;
+		}	
+	}
+}
+
+/*------------------------------------------
+*	buscket
+-------------------------------------------*/
+.buscket{
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-shadow: 1px -1px 0px #eee;
+	float: right;
+	height: 3.125em;
+	margin-top: 22px;
+	position: relative;
+	width: 13em;
+	@include respond-to(max-width, 999px){
+		margin-top: 5px;		
+	}	
+}
+
+.buscket-quantity{
+	background: #f9f9fb;
+	border: 1px solid #fd6c6d;
+	border-radius: 50%;
+	color: red;
+	font-family: 'arial', sans-serif;
+	font-size: 20px;
+	font-weight: 800;
+	height: 1.1em;
+	left: 8.5%;
+	line-height: 1em;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	text-align: center;
+	width: 1.1em;
+	z-index: 1;	
+	&:hover, &:focus {
+		border-color: #aaa;
+		box-shadow: none;
+	}
+	@include respond-to(max-width, 999px){
+		font-size: 1.2em;
+		height: 1.2em;
+		line-height: 1.2em;
+		width: 1.2em;				
+	}	
+}
+
+.buscket-link{
+	font-size: 1.5em;
+	font-style: italic;
+	font-weight: 900;
+	display: block;
+	height: 100%;
+	line-height: 1.75em;
+	padding: 0;
+	text-align: center;
+	width: 100%;	
+	&::before {
+		background: url(../images/shopping-cart-1_318-10653.jpg) no-repeat; 
+		background-size: contain;	
+		content: " ";  
+		display: block;
+		float: left;
+		height: 1.2em;
+		margin-left: 5%;
+		opacity: 0.7;
+		position: relative;
+		top: 18%;
+		width: 1.5em;	
+	}
+	&::after {
+		content: " ";  
+		display: block;
+		float: right;
+		margin-right: 5%;
+		position: relative;
+		top: 35%;
+		/*----------
+		*	Triangle
+		--------------*/	
+		border-right: 0.25em solid transparent;
+		border-left: 0.25em solid transparent;
+		border-top: 0.5em solid #105a8f; //rgba(16, 90, 143, 0.7)
+		width: 0;
+		height: 0;
+	}
+	&:hover::after, &:focus::after{
+		@include transform($tr: rotate(180deg));
+	}
+}
+
+/*------------------------------------------
+*	Head Navigation
+-------------------------------------------*/
+@import "headerNavigation";

@@ -1,0 +1,27 @@
+.brandnames-block{ 
+	@include margPad;
+}
+
+.brandnames-subblock{ 
+	@include margPad;
+	float: left;
+	width: 25%;
+}
+
+.brandnames{
+	@include margPad;
+	list-style-type: none;
+	font-size: 0.75em;
+	width: 50%;
+	float: left;
+	@include respond-to(max-width, 999px){
+		width: 100%;		
+	}
+}
+.brandnames-item{
+	padding: 3px 0;
+	
+	a:hover, a:focus{
+		color: red;
+	}
+}

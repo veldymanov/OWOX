@@ -11,4 +11,16 @@
 7. Оптимизация графики.
 8. Чистота и структурность кода (и html и css).
 
+/*Browser Sync*/
 browser-sync start --server --files "*.*"
+
+
+
+/*Sass run*/
+In folder C:\Users\User\Documents\GitHub\owox_sass\style
+	sass scss/application.scss application.css
+	sass --update
+
+/*Sass --watch*/
+In folder C:\Users\User\Documents\GitHub\owox_sass\style
+	sass --watch style/scss:scss/..

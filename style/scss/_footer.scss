@@ -1,0 +1,202 @@
+footer{
+	font-size: 0.8em;
+	aside{
+		float: left;
+		font-size: 0.9em;
+		margin: 0 auto;
+		padding: 0 0 0 10px;
+		width: 25%;	
+		figure{
+			margin: 0 15px 10px 0;
+			padding: 0;
+			img{
+				width: 140px;
+			}
+			@include respond-to(max-width, 999px){
+				float: left;
+			}
+		}
+		p{
+			@include margPad;
+			data{
+				color: #777;
+			}
+		}
+		@include respond-to(max-width, 999px){
+			width: 100%;
+		}
+	}
+}
+
+/*------------------------------------------
+*	Foot-Navigation
+-------------------------------------------*/
+.foot-navigation{
+	.menu{
+		font-size: 0.9em;
+	}
+}
+
+/*------------------------------------------
+*	Foot-Container
+-------------------------------------------*/
+.foot-container{
+	border: 0;
+	border-image: linear-gradient(to bottom, #fff, #ccc, #fff) 1 100%;
+	border-right: 1px solid;
+	float: left;
+	margin: 0 0 40px 0;
+	padding: 0;
+	width: 75%;
+	@include respond-to(max-width, 999px){
+		border: 0;
+		border-bottom: 1px solid #ccc;
+		width: 100%;
+	}
+}
+
+.feedback{ 
+	float: left;
+	margin: 0;
+	padding: 10px 20px 20px 0;
+	width: 33.33%;
+	@include respond-to(max-width, 999px){
+		width: 100%;
+	}
+	& > div{
+		&:nth-child(1){ 
+			padding: 0 0 20px 0;		
+		}
+		p{
+			padding: 40px 0 0 0;
+			a{
+				color: black;
+			}	
+		}
+	}
+	div:nth-child(1){
+		p{
+			@include margPad;
+			font-size: 1.5em;
+		}	
+		a{
+			text-decoration: none;
+			font-weight: bold;
+			border-bottom: 1px dotted;		
+			&:hover, &:focus {
+				border:0;
+			}
+		}
+		@include respond-to(max-width, 999px){
+			float: left;				
+		}
+	}
+	div:nth-child(2){
+		@include respond-to(max-width, 999px){
+			float: right;
+			width: 220px;							
+		}					
+	}
+	.button-skew{
+		width: 200px;
+	}
+	.button-skew-link{
+		border-bottom: 1px dotted;
+		font-size: 1em;
+		margin: 3px 12px;
+		padding: 0;
+		text-decoration: none;
+		width: auto;	
+		&::after{
+			display: none;
+		}
+		&:hover, &:focus{
+			border: 0;
+		}
+	}
+}
+
+.worktime{ 
+	float: left;
+	margin: 0;
+	padding: 10px 20px 20px 0;
+	width: 33.33%;
+	ul{ 
+		margin: 0;
+		padding: 0 0 10px 0;
+		@include respond-to(max-width, 999px){
+			float: left;
+		}
+		li{
+			padding: 0 0 8px 0;
+		}
+	}
+	div{
+		width: 220px;
+		height: 70px;
+		overflow: hidden;
+		background: url(../images/visa-master-logo.png) no-repeat,
+					url(../images/webmoney-logo.png) no-repeat;
+		background-position: left bottom, 105px bottom;
+		background-size: 100px, 100px;	
+		@include respond-to(max-width, 999px){
+			float: right;
+		}		
+		p{
+			margin-top: 0;
+		}
+	}
+	@include respond-to(max-width, 999px){
+		width: 100%;
+	}	
+}
+
+.social{ 
+	float: left;
+	margin: 0;
+	padding: 10px 20px 20px 0;
+	width: 33.33%;
+	ul{
+		li{
+			margin: 0;
+			padding: 0 0 20px 0;	
+			@include respond-to(max-width, 999px){
+				float: left;
+				padding-right: 5%;
+			}
+			a:hover, a:focus{
+				text-decoration: none;
+			}
+			&::before {
+				content: " "; 
+				display: block;
+				float: left;
+				height: 25px;
+				padding-right: 10px;
+				position: relative;  
+				top: -3px;
+				width: 25px; 	
+			}
+			&:nth-child(1)::before{
+				background: url(../images/facebook-logo.jpg) no-repeat; 
+				background-size: contain;	 	
+			}
+			&:nth-child(2)::before{
+				background: url(../images/vkontakte-logo.png) no-repeat; 
+				background-size: contain;	 	
+			}
+			&:nth-child(3)::before{
+				background: url(../images/twitter-logo.jpg) no-repeat; 
+				background-size: contain;	 	
+			}
+			&:last-child{
+				@include respond-to(max-width, 999px){
+					padding-right: 0;
+				}			
+			}
+		}
+	}
+	@include respond-to(max-width, 999px){
+		width: 100%;
+	}
+}

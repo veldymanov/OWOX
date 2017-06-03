@@ -3,12 +3,12 @@
   <head>
     <meta charset='utf-8' />
 	<meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1' />
-	<title>OWOX</title>
+	<title>OWOX Sass</title>
 	
 	<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Rubik:400,400i,500,500i,700,700i,900,900i' />
 	<link rel='shortcut icon' href='images/livelink-shop-logo.png' type='image/x-icon'>
 	<link rel='stylesheet' href='style/normalize.css' />
-	<link rel='stylesheet' href='style/basic-styling.css'  type='text/css'>
+	<link rel='stylesheet' href='style/application.css'  type='text/css'>
 
   </head>
   
@@ -64,10 +64,6 @@
     <main class='content'>	
 		<nav class='main-navigation'> 
 			<ul class='dropnav clearfix js-dropnav'>
-				<li class='closeBtn'>
-					<a class='closeBtn-link js-closeBtn-link' href='javascript:void(0)'>&times;</a>
-				</li>		
-				
 				<li class='dropnav-item'>
 					<a class='dropnav-item-link' href='javascript:void(0);'>ПК и Серверы Prime PC</a>
 					<div class='dropnav-item-content'>
@@ -117,16 +113,20 @@
 					</div>
 				</li>		
 			</ul>
-			
+							
 			<ul class='mobnav clearfix'>
-				<li class='openBtn'>
-					<a class='openBtn-link js-openBtn-link' href='javascript:void(0);' > menu open button</a>
-				</li>	
-			
 				<li class='mobnav-item dropnav-item'>
 					<a class='dropnav-item-link js-mobnav-item-link' href='javascript:void(0);'>ПК и Серверы Prime PC</a>
 				</li>
-			</ul>				
+				
+				<li class='openBtn'>
+					<a class='openBtn-link js-openBtn-link' href='javascript:void(0);' > menu open button</a>
+				</li>	
+			</ul>	
+						
+			<div class='closeBtn'>
+				<a class='closeBtn-link js-closeBtn-link' href='javascript:void(0)'>&times;</a>
+			</div>	
 		</nav>	
 		
 		<section class='info clearfix'>
@@ -193,8 +193,7 @@
 			</aside>	
 		</section>		
 
-		<section class='sales'>			
-		
+		<section class='sales'>				
 			<ul class='sales-nav clearfix'>
 				<li class='sales-nav-item js-sales-nav-item is-active'>
 					<a class='sales-nav-item-link' href='javascript:void(0);'>
@@ -242,8 +241,7 @@
 				<li class='sales-mobnav-item js-sales-mobnav-item'><a>Скоро в продаже</a></li>
 			</ul>					
 		
-			<ul class='sales-panels clearfix'>
-			
+			<ul class='sales-panels clearfix'>		
 				<li class='sales-panel special-offer is-active js-sales-panel'>
 					<div class='button-skew'>
 						<a class='button-skew-link' href='javascript:void(0);'>Все спецпредложения</a>
@@ -256,7 +254,7 @@
 						<ul class='offer clearfix js-offer'>				
 							<li class='offer-item js-offer-item'>
 								<span class='attention'>Подарок!</span>
-								<figure class='offer-img tooltip-container'>
+								<figure class='offer-img'>
 									<img src='images/asus_ee_pc_101pe-white.jpg' alt='ASUS ee PC 101PE White'>
 									<figcaption>+ в подарок мышка и стильная сумка</figcaption>
 									<span class='tooltip'>Фото мышки и сумки</span>
@@ -360,8 +358,7 @@
 			
 			<h5 class='clearfix'>IT-решения и компьютерная техника ведущих мировых производителей</h5>
 			
-			<div class='brands-block clearfix'>	
-			
+			<div class='brands-block clearfix'>			
 				<div class='brands-subblock clearfix'>
 					<div class='brands-button-block clearfix'>			
 						<div class='brands-button'>
@@ -428,8 +425,7 @@
 				
 			</div>
 			
-			<div class='brandnames-block clearfix'>
-			
+			<div class='brandnames-block clearfix'>			
 				<div class='brandnames-subblock clearfix'>
 					<ul class='brandnames'>
 						<li class='brandnames-item'><a href='javascript:void(0);'>ACER</a></li>
@@ -516,8 +512,7 @@
 						<li class='brandnames-item'><a href='javascript:void(0);'>z20</a></li>
 						<li class='brandnames-item'><a href='javascript:void(0);'>z21</a></li>			
 					</ul>
-				</div>
-				
+				</div>		
 			</div>
 		</nav>
 
@@ -529,7 +524,7 @@
 			<h3>Статьи и обзоры</h3>	
 			
 			<div class="articles-block clearfix">	
-				<article>
+				<article class="articles-block-item">
 					<figure>
 						<img src="images/samsung-galaxy-r.jpg" alt="Sumsung Galaxy R">
 					</figure>
@@ -537,7 +532,7 @@
 					<p>Sumsung продолжает наращивать количество моделей в своей звездной серии смартфонов Galaxy. Впрочем, на этот раз причина появления новинки вполне предсказуема.</p>
 				</article>
 				
-				<article>
+				<article class="articles-block-item">
 					<figure>
 						<img src="images/hp-descjet1663.jpg" alt="HP Descjet 1663">
 					</figure>
@@ -545,7 +540,7 @@
 					<p>Волны удовольствия...! Ну какой украинец не любит вкусной еды? Вот и я, признаться, не прочь поесть что-нибудь аппетитное.</p>					
 				</article>
 				
-				<article>
+				<article class="articles-block-item" >
 					<figure>
 						<img src="images/lifebook-x2.jpg" alt="Laptop Lifebook X2">
 					</figure>
@@ -553,7 +548,7 @@
 					<p>Настольный компьютер, ноутбук, нетбук, планшет, смартфон - вроде бы все размерные ниши компьютерных устройств уже заняты, и ничего тут не придумаеш.</p>					
 				</article>
 				
-				<article>
+				<article class="articles-block-item">
 					<figure>
 						<img src="images/seagate-satellite.jpg" alt="HDD Segate GoFlex Satellite">
 					</figure>

@@ -1,0 +1,74 @@
+/*------------------------------------------
+*	Main Navigation
+-------------------------------------------*/
+@import 'mainNavigation';
+
+/*------------------------------------------
+*	Main Info
+-------------------------------------------*/
+@import 'mainInfo';
+
+/*------------------------------------------
+*	Sales
+-------------------------------------------*/
+@import "mainSales";
+
+/*------------------------------------------
+*	Brands
+-------------------------------------------*/
+@import "mainBrands";
+
+/*------------------------------------------
+*	Brandnames-Block
+-------------------------------------------*/
+@import "mainBrandnames-block";
+
+/*------------------------------------------
+*	Articles
+-------------------------------------------*/
+.articles{
+	background: linear-gradient(to bottom, #fff 93%, rgba(198, 198, 236, 1));
+	border: 0;
+	border-bottom: 3px solid #333399;
+	margin: 40px 0;
+	padding: 0 0 40px 0;
+	.button-skew{
+		float: right;
+		width: 220px;
+	}
+}
+
+.articles-block{ 
+	font-size: 0.8em;
+	margin-top: 20px;
+	padding: 0;
+}	
+
+.articles-block-item{ 
+	float: left;
+	margin: 0;
+	padding: 0 1em 0 0;
+	width: 25%;	
+	@include respond-to(max-width, 999px){
+		width: 100%;
+	}
+	figure{
+		@include margPad;
+		height: 150px;
+		overflow: hidden;
+		text-align: center;
+		width: 100%;
+		@include respond-to(max-width, 999px){
+			float: left;
+			width: 25%;
+			min-width: 200px;		
+		}
+		img{
+			max-height: 130px;
+			max-width: 80%;
+		}
+	}
+	h4{
+		margin: 0;
+	}
+}

@@ -4,21 +4,20 @@ jQuery(document).ready(function(){
 //------------------------------------------
 //	Mobile menu (main)
 //-------------------------------------------
-
 	function dropnavOpen(event){
 		event.preventDefault();		
 		$('.js-dropnav').css('display', 'block');
+		$('.js-closeBtn-link').css('display', 'block');	
+	}
+	function dropnavClose(event){
+		event.preventDefault();	
+		$('.js-dropnav').css('display', 'none');
+		$('.js-closeBtn-link').css('display', 'none');			
 	}
 	
 	$('.js-openBtn-link').on('click', dropnavOpen);
-	
 	$('.js-mobnav-item-link').on('click', dropnavOpen);
-	
-	$('.js-closeBtn-link').on('click', function (event){
-		event.preventDefault();	
-		
-		$('.js-dropnav').css('display', 'none');		
-	});
+	$('.js-closeBtn-link').on('click', dropnavClose);
 	
 	$(document).on('click', function(event){ 
 		var elTrgMatch = $(event.target).is('.js-dropnav, .js-openBtn-link, .js-mobnav-item-link');
@@ -26,7 +25,7 @@ jQuery(document).ready(function(){
 		if(!(elTrgMatch) && !(elTrgMatch1.length > 0)) {
 			event.preventDefault();
 			
-			$('.js-dropnav').css('display', 'none');
+			dropnavClose(event);
 		}
 	});
 
@@ -51,6 +50,19 @@ jQuery(document).ready(function(){
 //	Sales
 //-------------------------------------------	
 
+	$('.js-sales-nav-item:first-child').on('mouseover', function(event){
+		event.preventDefault();
+		
+		$('.js-sales-panel').css('border-top-left-radius', '0');
+	});
+	
+	$('.js-sales-nav-item:first-child').on('mouseleave', function(event){
+		event.preventDefault();
+		
+		$('.js-sales-panel').css('border-top-left-radius', '5px');
+	});	
+	
+	
 	$('.js-sales-openBtn').on('click', function(event){
 		event.preventDefault();
 		
@@ -149,7 +161,7 @@ jQuery(document).ready(function(){
 					/*Starting Touch Area Size*/
 					touchslider.touchAreaSize(gridid);
 					/*Resizing Touch Area Size*/
-					$(window).resize(function(){ touchslider.touchAreaSize(gridid);	});
+					$(window).resize(function(){ touchslider.touchAreaSize(gridid) });
 					
 					/*Sliding by click*/
 					$('.js-next').on('click', function(){ touchslider.nextClick(gridid)});
@@ -168,7 +180,7 @@ jQuery(document).ready(function(){
 			left -=  touchslider.colWidth;
 			
 			if (Math.abs(left) <= Math.abs(maxDelta)) {
-				touchslider.doSlide($(gridid), left, '0.3s');
+				touchslider.doSlide($(gridid), left, '0s');
 			} 
 		},
 		
@@ -178,7 +190,7 @@ jQuery(document).ready(function(){
 			left +=  touchslider.colWidth;
 			
 			if(left <= 0){
-				touchslider.doSlide($(gridid), left, '0.3s');
+				touchslider.doSlide($(gridid), left, '0s');
 			} 
 		},
 		

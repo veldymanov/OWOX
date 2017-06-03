@@ -1,0 +1,180 @@
+.info{
+	margin: 0 0 20px 0;
+	padding: 0;
+}
+
+/*------------------------------------------
+*	Info-Box
+-------------------------------------------*/
+.info-box { /*main section.info section.info-box*/
+	float: left;
+	width: calc(590px + 172px);
+	@include respond-to(max-width, 1199px){
+		width: 590px;
+	}
+	@include respond-to(max-width, 999px){
+		float: none;
+		margin: 0 auto;
+		width: calc(590px + 172px);		
+	}
+	@include respond-to(max-width, 800px){
+		width: 590px;
+	}
+	@include respond-to(max-width, 599px){
+		width: 100%;
+	}
+}
+
+/*------------------------------------------
+*	Panels
+-------------------------------------------*/
+.panels { 
+	@include margPad;
+	height: 240px;
+	position: relative;
+}
+
+.panels-button{
+	background: radial-gradient(ellipse farthest-corner at left top, #24b3cd, #5f0378);
+	border: 1px solid #534157;
+	border-radius: 4px;
+	height: 40px;
+	width: 250px;
+	line-height: 40px;
+}
+
+.panels-button-link{
+	border: 0;
+	border-radius: 4px;
+	color: #fff;
+	display: block;
+	font-weight: bold;
+	height: 100%;
+	text-align: center;
+	text-decoration: none;
+	width: 100%;
+	&:hover, &:focus{
+		border: solid 1px #777;
+	}
+}
+
+.panel {
+	background: url(../images/server1_bckgrnd.jpg) no-repeat,
+				url(../images/server2_bckgrnd.jpg) no-repeat, 
+				radial-gradient(ellipse farthest-corner at 55% 10%, #fff 60%, #98e2ee, #fff 120%); 
+	background-position: 400px bottom, 590px 50px, 0 0;
+	background-size: 150px, 150px, contain;	
+	border: 7px solid #689cbe;
+	border-radius: 5px;
+	height: 100%;
+	left: 0;
+	overflow: hidden;
+	padding-left: 30px;
+	position: absolute;
+	top: 0;
+	width: 100%;	
+	h2{
+		color: #623bc6;
+		margin: 10px 0;
+		max-width: 400px;
+	}
+	&:nth-child(2){
+		p{
+			max-width: 280px;
+			margin: 10px 0;
+		}
+	}
+	&.is-active {
+		z-index: 1;
+	}
+}
+
+/*------------------------------------------
+*	Panels Navigation
+-------------------------------------------*/
+.panels-nav { 
+	list-style-type: none;
+	margin: 0; 
+	padding-left: 10px;
+	position: relative;
+	top: -7px;
+	z-index: 1;
+}
+
+.panels-nav-item {
+	float: left; 
+	margin-right: 2px;
+	width: 20px;
+	
+	&.is-active .panels-nav-item-link{
+		background-color: white;
+		color: red;
+	}	
+}
+
+.panels-nav-item-link {
+	background-color: #689cbe;
+	border: 2px solid #689cbe;
+	border-radius: 0 0 5px 5px;
+	border-top: 0;
+	color: #fff;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 2;
+	text-align: center;
+	text-decoration: none;
+	width: 100%;	 
+	&:focus, &:hover {
+		background-color: white;
+		color: red;
+	}
+}
+
+/*------------------------------------------
+*	Info-Aside
+-------------------------------------------*/
+.info-aside{ 
+	float: right;
+	padding: 0 3% 0 4%;
+	width: calc(100% - 590px - 172px);
+	h2{
+		color: red;
+		font-style: italic;
+		margin-bottom: 15px;
+	}
+	@include respond-to(max-width, 1199px){
+		width: calc(100% - 590px);
+	}
+	@include respond-to(max-width, 999px){
+		width: 100%;			
+	}
+}
+
+.discount {
+	font-size: 13px;
+}
+
+.discount-item {
+	margin-bottom: 25px;
+	&::before{
+		content: " "; 
+		display: block;
+		float: left;
+		height: 35px;
+		padding-right: 20px;
+		width: 35px; 	
+	}
+	&:first-child::before{
+		background: url(../images/logo-kaspersky.jpg) no-repeat; 
+		background-size: contain;	 
+	}
+	&:nth-child(2)::before{
+		background: url(../images/ABBYY-Finereader-icon.png) no-repeat; 
+		background-size: contain;	 
+	}
+	&:last-child::before{
+		background: url(../images/microsoft-logo.jpg) no-repeat; 
+		background-size: contain;	 
+	}	
+}
