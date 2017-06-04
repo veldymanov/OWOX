@@ -998,7 +998,7 @@ submit, button {
   .to-buscket span {
     font-size: 18px; }
   .to-buscket::after {
-    background: url(../images/shopping-cart-1_318-10653.jpg) no-repeat;
+    background: url(../images/shopping-cart-1_318-10653.png) no-repeat;
     background-size: contain;
     content: " ";
     display: block;
