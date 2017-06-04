@@ -31,7 +31,6 @@ jQuery(document).ready(function(){
 //------------------------------------------
 //	Info
 //-------------------------------------------
-	
 	$('.js-panels-nav-item-link').on('click', function(event){
 		event.preventDefault();
 		
