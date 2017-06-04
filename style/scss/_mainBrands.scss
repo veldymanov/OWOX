@@ -63,17 +63,18 @@
 }
 
 .brands-button{
-	border: 0; /*For Safari*/
-	border-image: linear-gradient(to bottom, #fff, #ccc) 1 100%; 
-	border-right: 1px solid #ccc;
+	border: 0; //For Safari
+	@include borderImage( linear-gradient(#fff, #ccc) 1 ); 
+	border-right: 1px solid #ccc; // #ccc if border-image is not working
 	float: left;
 	height: 64px;
 	padding: 0;
+	position: relative;
 	width: 50%;
 	&:nth-child(3),	&:nth-child(4){
-		border-image: linear-gradient(to top, #fff, #ccc) 1 100%; 
+		@include borderImage( linear-gradient(to top, #fff, #ccc) 1 ); 
 	}
-	&:nth-child(1) .brands-button-link, &:nth-child(2) .brands-button-link{
+	&:nth-child(1), &:nth-child(2){
 		border-bottom: 1px solid #ccc;
 	}	
 }
@@ -81,9 +82,14 @@
 .brands-button-link{
 	display: block;
 	height: 90%;
-	margin: 0 auto;
+	//margin: auto;
+	max-width: 130px;
 	padding: 0;
+	position: absolute;
+	left: 50%;
 	text-indent: $linkAccess;
+	top: 50%;
+	@include transform( translate(-50%, -50%) );
 	width: 90%;
 	&:hover, &:focus{
 		border: 1px solid #ccc;

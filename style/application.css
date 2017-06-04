@@ -83,6 +83,8 @@ submit, button {
 -------------------------------------------*/
 .button-skew {
   -ms-transform: skewX(-17deg);
+  -o-transform: skewX(-17deg);
+  -moz-transform: skewX(-17deg);
   -webkit-transform: skewX(-17deg);
   transform: skewX(-17deg);
   background: #fff;
@@ -97,6 +99,8 @@ submit, button {
 
 .button-skew-link {
   -ms-transform: skewX(17deg);
+  -o-transform: skewX(17deg);
+  -moz-transform: skewX(17deg);
   -webkit-transform: skewX(17deg);
   transform: skewX(17deg);
   display: block;
@@ -202,6 +206,8 @@ submit, button {
 
 .search-form-input {
   -ms-transform: skewX(-17deg);
+  -o-transform: skewX(-17deg);
+  -moz-transform: skewX(-17deg);
   -webkit-transform: skewX(-17deg);
   transform: skewX(-17deg);
   border: 1px solid #d9d9d9;
@@ -212,6 +218,8 @@ submit, button {
   width: 100%; }
   .search-form-input::placeholder {
     -ms-transform: skewX(17deg);
+    -o-transform: skewX(17deg);
+    -moz-transform: skewX(17deg);
     -webkit-transform: skewX(17deg);
     transform: skewX(17deg);
     color: #aaa;
@@ -222,6 +230,8 @@ submit, button {
 
 .search-form-submit {
   -ms-transform: skewX(-17deg);
+  -o-transform: skewX(-17deg);
+  -moz-transform: skewX(-17deg);
   -webkit-transform: skewX(-17deg);
   transform: skewX(-17deg);
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 20%, rgba(205, 205, 205, 0.2), rgba(255, 255, 255, 0.2) 90%) no-repeat, url(../images/enter-arrow.jpg) center no-repeat;
@@ -282,7 +292,7 @@ submit, button {
   text-decoration: none; }
   .entrance-link::before {
     content: " ";
-    background: url(../images/N8240EC9D00EA.jpg) no-repeat;
+    background: url(../images/N8240EC9D00EA.png) no-repeat;
     background-size: contain;
     float: left;
     height: 20px;
@@ -353,7 +363,7 @@ submit, button {
   text-align: center;
   width: 100%; }
   .buscket-link::before {
-    background: url(../images/shopping-cart-1_318-10653.jpg) no-repeat;
+    background: url(../images/shopping-cart-1_318-10653.png) no-repeat;
     background-size: contain;
     content: " ";
     display: block;
@@ -381,6 +391,8 @@ submit, button {
     height: 0; }
   .buscket-link:hover::after, .buscket-link:focus::after {
     -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
     -webkit-transform: rotate(180deg);
     transform: rotate(180deg); }
 
@@ -472,6 +484,8 @@ submit, button {
   width: 16.66%; }
   .dropnav-item:hover .dropnav-item-link::after, .dropnav-item:focus .dropnav-item-link::after {
     -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
     -webkit-transform: rotate(180deg);
     transform: rotate(180deg); }
   .dropnav-item:last-child .dropnav-item-content {
@@ -715,7 +729,7 @@ submit, button {
     padding-right: 20px;
     width: 35px; }
   .discount-item:first-child::before {
-    background: url(../images/logo-kaspersky.jpg) no-repeat;
+    background: url(../images/logo-kaspersky.png) no-repeat;
     background-size: contain; }
   .discount-item:nth-child(2)::before {
     background: url(../images/ABBYY-Finereader-icon.png) no-repeat;
@@ -916,6 +930,8 @@ submit, button {
 
 .attention {
   -ms-transform: rotate(-15deg);
+  -o-transform: rotate(-15deg);
+  -moz-transform: rotate(-15deg);
   -webkit-transform: rotate(-15deg);
   transform: rotate(-15deg);
   background: #d10000;
@@ -938,6 +954,8 @@ submit, button {
   height: 160px; }
   .offer-img img {
     -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
     left: 50%;
@@ -964,6 +982,8 @@ submit, button {
 
 .to-buscket {
   -ms-transform: skewX(-15deg);
+  -o-transform: skewX(-15deg);
+  -moz-transform: skewX(-15deg);
   -webkit-transform: skewX(-15deg);
   transform: skewX(-15deg);
   background: linear-gradient(to bottom, #fff 20%, #f2f3f3, #fff);
@@ -1104,24 +1124,38 @@ submit, button {
 
 .brands-button {
   border: 0;
-  /*For Safari*/
-  border-image: linear-gradient(to bottom, #fff, #ccc) 1 100%;
+  -o-border-image: linear-gradient(#fff, #ccc) 1;
+  -moz-border-image: linear-gradient(#fff, #ccc) 1;
+  -webkit-border-image: linear-gradient(#fff, #ccc) 1;
+  border-image: linear-gradient(#fff, #ccc) 1;
   border-right: 1px solid #ccc;
   float: left;
   height: 64px;
   padding: 0;
+  position: relative;
   width: 50%; }
   .brands-button:nth-child(3), .brands-button:nth-child(4) {
-    border-image: linear-gradient(to top, #fff, #ccc) 1 100%; }
-  .brands-button:nth-child(1) .brands-button-link, .brands-button:nth-child(2) .brands-button-link {
+    -o-border-image: linear-gradient(to top, #fff, #ccc) 1;
+    -moz-border-image: linear-gradient(to top, #fff, #ccc) 1;
+    -webkit-border-image: linear-gradient(to top, #fff, #ccc) 1;
+    border-image: linear-gradient(to top, #fff, #ccc) 1; }
+  .brands-button:nth-child(1), .brands-button:nth-child(2) {
     border-bottom: 1px solid #ccc; }
 
 .brands-button-link {
   display: block;
   height: 90%;
-  margin: 0 auto;
+  max-width: 130px;
   padding: 0;
+  position: absolute;
+  left: 50%;
   text-indent: -9999px;
+  top: 50%;
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   width: 90%; }
   .brands-button-link:hover, .brands-button-link:focus {
     border: 1px solid #ccc; }

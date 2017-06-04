@@ -13,9 +13,18 @@ $salesBrdCol: #689cbe;
 	padding: $pad;
 }
 @mixin transform($tr){
-	-ms-transform: $tr;     // IE 9
-    -webkit-transform: $tr; // Safari
+	-ms-transform: $tr;     // IE 9 - 10
+	-o-transform: $tr; 		// Opera 10.5 - 15
+	-moz-transform: $tr;    // Firefox 3.5 - 16
+    -webkit-transform: $tr; // Safari 3.1-9, Edge, Ghrome
     transform: $tr;         // Standard syntax		
+}
+@mixin borderImage($brIm){
+	//-ms-border-image: $brIm;     	// IE 
+	-o-border-image: $brIm; 		//Opera 10.5 - 15.0
+	-moz-border-image: $brIm; 		// Firefox 3.5 - 15
+    -webkit-border-image: $brIm; 	// Safari 3.0 - 6.0
+    border-image: $brIm;         	// Standard syntax		
 }
 @mixin respond-to($val, $query){
 	@media ($val: $query){
