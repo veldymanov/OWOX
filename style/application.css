@@ -867,13 +867,15 @@ submit, button {
   font-size: 50px;
   opacity: 0.3;
   position: absolute;
-  right: 5px;
   text-decoration: none;
   top: 30%; }
-  .prev.is-active, .is-active.next {
+  .prev.is-active, .next.is-active {
     opacity: 1; }
-  .prev:hover, .next:hover, .prev:active, .next:active, .prev:focus, .next:focus {
+  .prev:hover, .prev:active, .prev:focus, .next:hover, .next:active, .next:focus {
     color: #105a8f; }
+
+.prev {
+  right: 5px; }
 
 .next {
   left: 5px; }

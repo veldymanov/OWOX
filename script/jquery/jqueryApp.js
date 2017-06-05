@@ -96,7 +96,6 @@ jQuery(document).ready(function(){
 //------------------------------------------
 //	Sales Special Offer Touch
 //-------------------------------------------
-	
 	touchslider = {
 		output: function(/*string*/ msg) {
 			if (console) {
@@ -157,6 +156,7 @@ jQuery(document).ready(function(){
 				} finally {
 					/*Starting Touch Area Size*/
 					touchslider.touchAreaSize(gridid);
+					
 					/*Resizing Touch Area Size*/
 					$(window).resize(function(){ touchslider.touchAreaSize(gridid) });
 					
@@ -174,21 +174,25 @@ jQuery(document).ready(function(){
 			var left = touchslider.getLeft($(gridid));
 			var maxDelta = touchslider.width - parseInt($(gridid).parent().width(), 10);
 			
-			left -=  touchslider.colWidth;
+			if ( (left % touchslider.colWidth) === 0) { //No click during sliding
+				left -=  touchslider.colWidth;
 			
-			if (Math.abs(left) <= Math.abs(maxDelta)) {
-				touchslider.doSlide($(gridid), left, '0s');
-			} 
+				if (Math.abs(left) <= Math.abs(maxDelta)) {
+					touchslider.doSlide($(gridid), left, '0.5s');
+				} 
+			}
 		},
 		
 		prevClick: function(gridid){ //to right
 			var left = touchslider.getLeft($(gridid));
 			
-			left +=  touchslider.colWidth;
+			if ( (left % touchslider.colWidth) === 0) { //No click during sliding
+				left +=  touchslider.colWidth;
 			
-			if(left <= 0){
-				touchslider.doSlide($(gridid), left, '0s');
-			} 
+				if(left <= 0){
+					touchslider.doSlide($(gridid), left, '0.5s');
+				} 
+			}
 		},
 		
 		/**
@@ -220,17 +224,24 @@ jQuery(document).ready(function(){
 					touchslider.touchStart($(this), e);
 					//e.preventDefault();
 					//e.stopPropagation();
-					return true;
+					//return true;
 				};
 				
+				this.ontouchmove = function(e) {
+					touchslider.touchMove($(this), e);
+					//e.preventDefault();
+					//e.stopPropagation();
+					//return false;
+				};		
+				
 				this.ontouchend = function(e) {
-					e.preventDefault();
-					e.stopPropagation();
+					//e.preventDefault();
+					//e.stopPropagation();
 					
 					if (touchslider.sliding) {
 						touchslider.sliding = false;
 						touchslider.touchEnd($(this), e);
-						return false;
+						//return false;
 					} else {
 						/*
 						   We never slid so we can just return true
@@ -239,24 +250,9 @@ jQuery(document).ready(function(){
 						return true;
 					}
 				};
-				
-				this.ontouchmove = function(e) {
-					touchslider.touchMove($(this), e);
-					e.preventDefault();
-					e.stopPropagation();
-					return false;
-				};
 			});
 		},		
 
-		/**
-		 * A little helper to parse off the 'px' at the end of the left
-		 * CSS attribute and parse it as a number.
-		 */
-		getLeft: function(/*JQuery*/ elem) {
-			 return parseInt(elem.css('left'), 10);  //.substring(0, elem.css('left').length - 2), 10);
-		},
-		
 		/**
 		 * When the touch starts we add our sliding class a record a few
 		 * variables about where the touch started.  We also record the
@@ -264,8 +260,10 @@ jQuery(document).ready(function(){
 		 */
 		touchStart: function(/*JQuery*/ elem, /*event*/ e) {
 			 elem.css({
-				 '-webkit-transition-duration': '0',
-				 'transition-duration': '0'
+				'-ms-transition': 'left 0s',
+				'-moz-transition': 'left 0s',
+				'-o-transition': 'left 0s',
+				'transition': 'left 0s'
 			 });
 			 
 			 touchslider.startX = e.targetTouches[0].clientX;
@@ -273,6 +271,38 @@ jQuery(document).ready(function(){
 			 touchslider.touchStartTime = new Date().getTime();
 			 
 		},
+		
+		/**
+		 * While they are actively dragging we just need to adjust the
+		 * position of the grid using the place they started and the
+		 * amount they've moved.
+		 */
+		touchMove: function(/*JQuery*/ elem, /*event*/ e) {
+			if (!touchslider.sliding) {
+				//elem.parent().addClass('sliding');
+			}
+			 
+			touchslider.sliding = true;
+			 
+			var deltaX = e.targetTouches[0].clientX - touchslider.startX;
+			var left = deltaX + touchslider.startLeft;
+			
+			elem.css({
+				left: left + 'px'
+			});
+			 
+			if (touchslider.startX > e.targetTouches[0].clientX) {
+				/*
+				* Sliding to the left
+				*/
+				touchslider.slidingLeft = true;
+			} else {
+				/*
+				* Sliding to the right
+				*/
+				touchslider.slidingLeft = false;
+			}
+		},	
 		
 		/**
 		 * When the touch ends we need to adjust the grid for momentum
@@ -287,7 +317,7 @@ jQuery(document).ready(function(){
 				  */
 				 touchslider.doSlide(elem, 0, '1s');
 				 
-				 elem.parent().removeClass('sliding');
+				// elem.parent().removeClass('sliding');
 				 touchslider.startX = null;
 			 } else if ( Math.abs(touchslider.getLeft(elem))  > ( touchslider.width - elem.parent().width() )) {
 				 /*
@@ -295,7 +325,7 @@ jQuery(document).ready(function(){
 				  */
 				 touchslider.doSlide(elem, '-' + (touchslider.width - elem.parent().width()), '1s');
 				 
-				 elem.parent().removeClass('sliding');
+				// elem.parent().removeClass('sliding');
 				 touchslider.startX = null;
 			 } else {
 				 /*
@@ -307,12 +337,20 @@ jQuery(document).ready(function(){
 		},
 		
 		/**
+		 * A little helper to parse off the 'px' at the end of the left
+		 * CSS attribute and parse it as a number.
+		 */
+		getLeft: function(/*JQuery*/ elem) {
+			 return parseInt(elem.css('left'), 10);  //.substring(0, elem.css('left').length - 2), 10);
+		},
+		
+		/**
 		 * If the user drags their finger really fast we want to push 
 		 * the slider a little farther since they were pushing a large 
 		 * amount. 
 		 */
 		slideMomentum: function(/*jQuery*/ elem, /*event*/ e) {
-			 var slideAdjust = (new Date().getTime() - touchslider.touchStartTime) * 35;
+			 var slideAdjust = (new Date().getTime() - touchslider.touchStartTime) * 65;
 			 var left = touchslider.getLeft(elem);
 			 
 			 /*
@@ -359,17 +397,18 @@ jQuery(document).ready(function(){
 				 touchslider.doSlide(elem, Math.min(0, newLeft), '0.5s');
 			 }
 			 
-			 elem.parent().removeClass('sliding');
+			// elem.parent().removeClass('sliding');
 			 touchslider.startX = null;
 		},
 		
 		doSlide: function(/*jQuery*/ elem, /*int*/ x, /*string*/ duration) { 
-			 elem.css({
-				 left: x + 'px',
-				 '-webkit-transition-property': 'left',
-				 '-webkit-transition-duration': duration,
-				 'transition-property': 'left',
-				 'transition-duration': duration
+			elem.css({
+				left: x + 'px',
+				'-ms-transition': 'left ' + duration,
+				'-moz-transition': 'left ' + duration,
+				'-o-transition': 'left ' + duration,
+				'-webkit-transition': 'left ' + duration,
+				'transition': 'left ' + duration
 			 });
 			 
 			 if (x === 0) {
@@ -382,37 +421,7 @@ jQuery(document).ready(function(){
 				 $('.js-prev').addClass('is-active');
 				 $('.js-next').addClass('is-active');
 			 }
-
-		},
-		
-		/**
-		 * While they are actively dragging we just need to adjust the
-		 * position of the grid using the place they started and the
-		 * amount they've moved.
-		 */
-		touchMove: function(/*JQuery*/ elem, /*event*/ e) {
-			 if (!touchslider.sliding) {
-				 elem.parent().addClass('sliding');
-			 }
-			 
-			 touchslider.sliding = true;
-			 
-			  var deltaX = e.targetTouches[0].clientX - touchslider.startX;
-			  var left = deltaX + touchslider.startLeft;
-				 elem.css({left: left + 'px'});
-			 
-			 if (touchslider.startX > e.targetTouches[0].clientX) {
-				 /*
-				  * Sliding to the left
-				  */
-				 touchslider.slidingLeft = true;
-			 } else {
-				 /*
-				  * Sliding to the right
-				  */
-				 touchslider.slidingLeft = false;
-			 }
-		}				
+		}	
 	}	
 
 	touchslider.createSlidePanel('.js-offer', 215, 0);

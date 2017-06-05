@@ -139,13 +139,12 @@
 /*------------------------------------------
 *	Prev, Next buttons
 -------------------------------------------*/
-.prev{
+.prev, .next{
 	background: transparent;
 	cursor: pointer;
 	font-size: 50px;
 	opacity: 0.3;
 	position: absolute;
-	right: 5px;				//not for .next
 	text-decoration: none;
 	top: 30%;
 	&.is-active{
@@ -156,8 +155,11 @@
 	}
 }
 
+.prev {
+	right: 5px;	
+}
+
 .next{
-	@extend .prev;
 	left: 5px;
 }
 
