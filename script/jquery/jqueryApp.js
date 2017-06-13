@@ -1,8 +1,8 @@
 jQuery(document).ready(function(){
 
-//------------------------------------------
-//	Mobile menu (main)
-//-------------------------------------------
+	//------------------------------------------
+	//	Mobile menu (main)
+	//-------------------------------------------
 	function dropnavOpen(event){
 		event.preventDefault();		
 		$('.js-dropnav').css('display', 'block');
@@ -28,9 +28,9 @@ jQuery(document).ready(function(){
 		}
 	});
 
-//------------------------------------------
-//	Info
-//-------------------------------------------
+	//------------------------------------------
+	//	Info
+	//-------------------------------------------
 	$('.js-panels-nav-item-link').on('click', function(event){
 		event.preventDefault();
 		
@@ -44,9 +44,9 @@ jQuery(document).ready(function(){
 		$('.js-panel').eq(thisArrayIndex).addClass('is-active');	
 	});
 
-//------------------------------------------
-//	Sales
-//-------------------------------------------	
+	//------------------------------------------
+	//	Sales
+	//-------------------------------------------	
 	$('.js-sales-nav-item:first-child').on('mouseover', function(event){
 		event.preventDefault();
 		
@@ -93,10 +93,10 @@ jQuery(document).ready(function(){
 	$('.js-sales-mobnav-item').on('click', salesIsActive);
 	
 	
-//------------------------------------------
-//	Sales Special Offer Touch
-//-------------------------------------------
-	touchslider = {
+	//------------------------------------------
+	//	Sales Special Offer Touch
+	//-------------------------------------------
+	var touchslider = {
 		output: function(/*string*/ msg) {
 			if (console) {
 				console.info(msg);
@@ -195,7 +195,7 @@ jQuery(document).ready(function(){
 			}
 		},
 		
-		/**
+		/*
 		 * Fit Touch Area to Elements Quantity
 		*/
 		touchAreaSize: function(gridid){
@@ -268,8 +268,7 @@ jQuery(document).ready(function(){
 			 
 			 touchslider.startX = e.targetTouches[0].clientX;
 			 touchslider.startLeft = touchslider.getLeft(elem);
-			 touchslider.touchStartTime = new Date().getTime();
-			 
+			 touchslider.touchStartTime = new Date().getTime(); 
 		},
 		
 		/**
@@ -343,6 +342,28 @@ jQuery(document).ready(function(){
 		getLeft: function(/*JQuery*/ elem) {
 			 return parseInt(elem.css('left'), 10);  //.substring(0, elem.css('left').length - 2), 10);
 		},
+
+		doSlide: function(/*jQuery*/ elem, /*int*/ x, /*string*/ duration) { 
+			elem.css({
+				left: x + 'px',
+				'-ms-transition': 'left ' + duration,
+				'-moz-transition': 'left ' + duration,
+				'-o-transition': 'left ' + duration,
+				'-webkit-transition': 'left ' + duration,
+				'transition': 'left ' + duration
+			 });
+			 
+			 if (x === 0) {
+				 $('.js-prev').removeClass('is-active');
+				 $('.js-next').addClass('is-active');
+			 } else if (Math.abs(x) === touchslider.width - parseInt(elem.parent().width(), 10) ){
+				 $('.js-next').removeClass('is-active');
+				 $('.js-prev').addClass('is-active');
+			 } else {
+				 $('.js-prev').addClass('is-active');
+				 $('.js-next').addClass('is-active');
+			 }
+		},	
 		
 		/**
 		 * If the user drags their finger really fast we want to push 
@@ -399,29 +420,7 @@ jQuery(document).ready(function(){
 			 
 			// elem.parent().removeClass('sliding');
 			 touchslider.startX = null;
-		},
-		
-		doSlide: function(/*jQuery*/ elem, /*int*/ x, /*string*/ duration) { 
-			elem.css({
-				left: x + 'px',
-				'-ms-transition': 'left ' + duration,
-				'-moz-transition': 'left ' + duration,
-				'-o-transition': 'left ' + duration,
-				'-webkit-transition': 'left ' + duration,
-				'transition': 'left ' + duration
-			 });
-			 
-			 if (x === 0) {
-				 $('.js-prev').removeClass('is-active');
-				 $('.js-next').addClass('is-active');
-			 } else if (Math.abs(x) === touchslider.width - parseInt(elem.parent().width(), 10) ){
-				 $('.js-next').removeClass('is-active');
-				 $('.js-prev').addClass('is-active');
-			 } else {
-				 $('.js-prev').addClass('is-active');
-				 $('.js-next').addClass('is-active');
-			 }
-		}	
+		}
 	}	
 
 	touchslider.createSlidePanel('.js-offer', 215, 0);
