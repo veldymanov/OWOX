@@ -100,9 +100,9 @@
 	display: none;
 	.mobnav-item{
 		background: #fff;
-		margin: 8px;
+		margin: 16px 8px 8px 8px;
 		float: left;	
-		width: 250px;
+		width: 220px;
 	}
 	a.dropnav-item-link{
 		color: blue;
@@ -116,7 +116,9 @@
 .openBtn{
 	display: none;
 	float: right;
-	margin: 8px;	
+	margin: 8px;
+	overflow: hidden;
+	width: 50px;
 	@include respond-to(max-width, 1000px){
 		display: block;
 	}

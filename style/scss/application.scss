@@ -51,15 +51,18 @@ body {
 	min-height: 2030px;
 	min-width: 320px;
 	overflow-x: hidden;
-	@include respond-to(max-width, 999px){
+	@include respond-to(max-width, 1000px){
 		min-height: 3000px;
 	}
-	@include respond-to(max-width, 599px){
+	@include respond-to(max-width, 600px){
 		min-height: 3100px;
 	}
-	@include respond-to(max-width, 499px){
+	@include respond-to(max-width, 500px){
 		min-height: 3350px;
-	}	
+	}
+	@include respond-to(max-width, 400px){
+		min-height: 3500px;
+	}		
 }
 
 header, main, footer{

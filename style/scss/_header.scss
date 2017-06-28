@@ -1,7 +1,7 @@
 .head{
-	background: linear-gradient(to bottom, #fff 10%, rgba(240, 240, 245, 1), #fff) no-repeat;	
+	background: linear-gradient(to bottom, #fff 40%, rgba(245, 245, 250, 1), #fff 95%) no-repeat;	
 	left: -1.7%;
-	padding: 0 1.75% 20px 1.75%;
+	padding: 0 1.75% 10px 1.75%;
 	position: relative;
 	width: 103.5%;
 }
@@ -10,7 +10,7 @@
 *	Head Top
 -------------------------------------------*/
 .head-top{
-	margin-bottom: 10px;
+
 }
 
 /*------------------------------------------
@@ -20,14 +20,9 @@
 	background: url(../images/livelink-shop-logo.png) no-repeat;
 	background-size: contain;
 	float: left;
-	height: 90px;
-	width: 180px;
-	@include respond-to(max-width, 999px){
-		height: 65px;
-		width: 130px;
-	}	
-	@include respond-to(max-width, 599px){
-		height: 75px;
+	height: 86px;
+	width: 173px;
+	@include respond-to(max-width, 400px){
 		width: 150px;
 	}	
 }
@@ -42,17 +37,21 @@
 /*------------------------------------------
 *	Search
 -------------------------------------------*/
-.search{ 
+.search { 
 	float: left;
 	font-family: arial, sans-serif;
 	margin-left: 4%;
+		
+	@include respond-to(max-width, 750px){
+		display: none;
+	}	
 }
 
 .search-info {
 	font-size: 1.4em;	
 	font-style: italic;
 	margin-bottom: 15px;
-	@include respond-to(max-width, 999px){
+	@include respond-to(max-width, 1000px){
 		font-size: 1.1em;	
 		margin-bottom: 15px;
 	}	
@@ -61,7 +60,7 @@
 .search-info-phone{
 	font-size: 1.4em;
 	font-weight: bold;
-	@include respond-to(max-width, 999px){
+	@include respond-to(max-width, 1000px){
 		font-size: 1em;
 		font-weight: normal;
 	}	
@@ -77,19 +76,14 @@
 	&:hover{
 		border-bottom-width: 0;
 	}
-	@include respond-to(max-width, 999px){
+	@include respond-to(max-width, 1000px){
 		margin-left: 10px;
 		font-size: 0.75em;
 		vertical-align: text-top;
 	}	
-	@include respond-to(max-width, 599px){
-		display: block;
-		margin-top: 5px;
-		width: 123px;
-	}	
 }
 
-.search-form{
+.search-form {
 	position: relative;
 }
 
@@ -106,9 +100,6 @@
 		color: #aaa;
 		font-style: italic;
 	}
-	@include respond-to(max-width, 599px){
-		width: 220px;
-	}	
 }
 
 .search-form-submit {
@@ -140,7 +131,7 @@
 	margin-left: 7%;
 	opacity: 0.8;
 	width: 102px;	
-	@include respond-to(max-width, 999px){
+	@include respond-to(max-width, 1000px){
 		display: none;
 	}	
 }
@@ -157,11 +148,12 @@
 -------------------------------------------*/
 .head-top-right{
 	float: right;
-	@include respond-to(max-width, 999px){
+	@include respond-to(max-width, 450px){
 	   font-size: 0.7em;
-	}
-	@include respond-to(max-width, 599px){
 	   margin-top: 10px;
+	}
+	@include respond-to(max-width, 400px){
+	   margin-top: 0;
 	}		
 }
 
@@ -182,16 +174,16 @@
 		width: 20px; 
 	}
 	&:hover{
-		border-width:0;
+		border-width: 0;
 	}
 	& span:first-child{
-		@include respond-to(max-width, 999px){
+		@include respond-to(max-width, 450px){
 			display: none;
 		}	
 	}	
 	& span:last-child{
 		display:none;
-		@include respond-to(max-width, 999px){
+		@include respond-to(max-width, 450px){
 			display: inline;
 		}	
 	}
@@ -200,7 +192,7 @@
 /*------------------------------------------
 *	buscket
 -------------------------------------------*/
-.buscket{
+.buscket {
 	border: 1px solid #ccc;
 	border-radius: 4px;
 	box-shadow: 1px -1px 0px #eee;
@@ -209,12 +201,12 @@
 	margin-top: 22px;
 	position: relative;
 	width: 13em;
-	@include respond-to(max-width, 999px){
-		margin-top: 5px;		
+	@include respond-to(max-width, 1000px){
+		margin-top: 10px;		
 	}	
 }
 
-.buscket-quantity{
+.buscket-quantity {
 	background: #f9f9fb;
 	border: 1px solid #fd6c6d;
 	border-radius: 50%;
@@ -236,7 +228,7 @@
 		border-color: #aaa;
 		box-shadow: none;
 	}
-	@include respond-to(max-width, 999px){
+	@include respond-to(max-width, 700px){
 		font-size: 1.2em;
 		height: 1.2em;
 		line-height: 1.2em;
@@ -244,7 +236,7 @@
 	}	
 }
 
-.buscket-link{
+.buscket-link {
 	font-size: 1.5em;
 	font-style: italic;
 	font-weight: 900;
