@@ -22,7 +22,7 @@ body {
   font-size: 16px;
   max-width: 1200px;
   min-height: 2030px;
-  min-width: 400px;
+  min-width: 320px;
   overflow-x: hidden; }
   @media (max-width: 999px) {
     body {
@@ -461,16 +461,18 @@ submit, button {
   /*ul*/
   position: relative;
   background-color: inherit; }
-  @media (max-width: 999px) {
+  @media (max-width: 1000px) {
     .dropnav {
+      direction: rtl;
       display: none;
       font-size: 1em;
-      height: 100%;
-      overflow: auto;
-      padding-top: 40px;
+      height: 300px;
+      max-height: 100%;
+      overflow-y: auto;
+      padding-top: 10px;
       position: fixed;
-      right: 5px;
-      top: 5px;
+      right: -260px;
+      top: 0;
       z-index: 3; } }
   @media (min-width: 1000px) {
     .dropnav {
@@ -537,10 +539,10 @@ submit, button {
     margin: 8px;
     float: left;
     width: 250px; }
-  .mobnav a {
+  .mobnav a.dropnav-item-link {
     color: blue;
     padding: 3px 5px; }
-  @media (max-width: 999px) {
+  @media (max-width: 1000px) {
     .mobnav {
       display: block; } }
 
@@ -548,7 +550,7 @@ submit, button {
   display: none;
   float: right;
   margin: 8px; }
-  @media (max-width: 999px) {
+  @media (max-width: 1000px) {
     .openBtn {
       display: block; } }
 
@@ -562,23 +564,6 @@ submit, button {
   height: 24px;
   text-indent: -9999px;
   width: 30px; }
-
-/*------------------------------------------
-*	Close button for mobile menu
--------------------------------------------*/
-.closeBtn {
-  position: fixed;
-  right: 215px;
-  top: 5px;
-  width: 50px;
-  z-index: 4; }
-  .closeBtn .closeBtn-link {
-    display: none;
-    padding: 0;
-    font-size: 1.5em;
-    text-align: center; }
-    .closeBtn .closeBtn-link:hover, .closeBtn .closeBtn-link:focus {
-      background: #006cb3; }
 
 /*------------------------------------------
 *	Main Info
@@ -858,9 +843,9 @@ submit, button {
 .special-offer .button-skew {
   width: 220px; }
 
-/*------------------------------------------
+/*---------------------
 *	Prev, Next buttons
--------------------------------------------*/
+-----------------------*/
 .prev, .next {
   background: transparent;
   cursor: pointer;
@@ -884,9 +869,7 @@ submit, button {
 *	Offer
 -------------------------------------------*/
 .special-offer-content {
-  height: 100%;
-  overflow: hidden;
-  width: 100%; }
+  height: 100%; }
 
 .offer {
   height: 100%;

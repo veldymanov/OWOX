@@ -12,15 +12,16 @@
 8. Чистота и структурность кода (и html и css).
 
 /*Browser Sync*/
-browser-sync start --server --files "*.*"
+C:\Users\User\Documents\GitHub\owox
+	browser-sync start --server --files "*.*"
 
 
 
 /*Sass run*/
-In folder C:\Users\User\Documents\GitHub\owox\style
+C:\Users\User\Documents\GitHub\owox\style
 	sass scss/application.scss application.css
 	sass --update
 
 /*Sass --watch*/
-In folder C:\Users\User\Documents\GitHub\owox\style
+C:\Users\User\Documents\GitHub\owox\style
 	sass --watch scss:scss/..

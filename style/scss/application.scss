@@ -49,7 +49,7 @@ body {
 	font-size: 16px;
 	max-width: 1200px;
 	min-height: 2030px;
-	min-width: 400px;
+	min-width: 320px;
 	overflow-x: hidden;
 	@include respond-to(max-width, 999px){
 		min-height: 3000px;
