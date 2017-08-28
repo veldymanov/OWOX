@@ -1,3 +1,7 @@
+# Owox Test Application
+
+## Owox Test Application Requirements
+
 Задача:
 Необходимо сделать адаптивную верстку макета главной страницы интернет-магазина.
 
@@ -11,17 +15,15 @@
 7. Оптимизация графики.
 8. Чистота и структурность кода (и html и css).
 
-/*Browser Sync*/
-C:\Users\User\Documents\GitHub\owox
-	browser-sync start --server --files "*.*"
 
+## Workings of the Application
 
+### Running the Application during Development with Browser-Sync
 
-/*Sass run*/
-C:\Users\User\Documents\GitHub\owox\style
-	sass scss/application.scss application.css
-	sass --update
+- From folder `C:\Users\User\Documents\GitHub\owox`
+- Run `browser-sync start --server --files "*.*"`
 
-/*Sass --watch*/
-C:\Users\User\Documents\GitHub\owox\style
-	sass --watch scss:scss/..
+### Running the Sass Watch during Development
+
+- From folder `C:\Users\User\Documents\GitHub\owox\style`
+- Run `sass --watch scss:scss/.`
